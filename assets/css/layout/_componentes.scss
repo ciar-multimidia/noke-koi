@@ -1,0 +1,584 @@
+/****************************************
+ * CONTAINER*
+ ****************************************/
+
+.container {
+	width: 100%;
+    max-width: $container;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px;
+    position: relative;
+	@media (max-width: $container) {
+        max-width: 100%;
+    }
+    @media (max-width: $tablet) {
+    	padding: 0 20px;
+    }
+    @media (max-width: $smart-maior) {
+    	padding: 0 10px;
+    }
+}
+
+/****************************************
+ * MENU *
+ ****************************************/
+
+#menu-barra {
+    position: fixed;
+    background-color: $marrom;
+    background-repeat: no-repeat;
+    z-index: 3;
+    @media (min-width: $smart-maior) {
+        width: 90px;
+        height: 100%;
+        background-image: url(../img/menu-desktop-padrao.svg);
+        background-position: center 90px;
+    }
+    @media (max-width: $smart-maior) {
+        height: 60px;
+        background-image: url(../img/menu-mobile-padrao.svg);
+        background-position: center;
+        padding: unset;
+    }
+    button {
+        color: white;
+        font-weight: 600;
+        background-image: url(../img/menu-icone.svg);
+        background-repeat: no-repeat;
+        background-position: center 0px;
+        background-size: 100%;
+        cursor: pointer;
+        transition: all 400ms;
+        &:hover {
+            background-size:75%;
+            background-position: center 5px;
+        }
+        @media (min-width: $smart-maior) {
+            margin: 15px auto;
+            padding-top: 35px;
+            display: block;
+        }
+        @media (max-width: $smart-maior) {
+            height: 100%;
+            padding-top: 35px;
+            float: right;
+            width: 80px;
+            background-position: center 10px;
+            background-color: $marrom;
+            background-size: 40%;
+            &:hover {
+                background-size:35%;
+            }
+        }
+
+    }
+}
+
+#menu-aberto {
+    height: 100vh;
+    overflow: hidden;
+    padding: 40px;
+    background-color: $marrom;
+    z-index: 1;
+    transition: $transicao;
+    position: fixed; 
+    @media (min-width: $smart-maior) {
+        width: 420px;
+        left: -330px;
+    }
+    @media (max-width: $smart-maior) {
+        width: 100%;
+        left: -100%;
+    }
+    .itens-menu {
+        overflow-y: scroll;
+        width: 80%;
+        margin-bottom: 40px;
+        @media (min-width: $smart-maior) {
+            height: 65vh;
+        }
+        @media (max-width: $smart-maior) {
+            height: 72vh;
+        }
+        &::-webkit-scrollbar {
+          width: 5px;
+        }
+
+        &::-webkit-scrollbar-track {
+          background: #ffffff00; 
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background: #cc3e0069; 
+          opacity: .5;
+        }
+        > ul {
+            font-weight: 700;
+            margin-top: 40px;
+            font-size: 20px;
+            color: white;
+            li {
+                position: relative;
+                padding: 5px 0;
+                .sub-menu {
+                    height: 0;
+                    visibility: hidden;
+                    margin: unset;
+                    font-size: 16px;
+                    font-weight: 500;
+                    position: relative;
+                    transition: opacity 2s, top 1s;
+                    top: -200px;
+                    z-index: 1;
+                    opacity: 0;
+                    li {
+                        padding: unset;
+                        margin: 5px 0 5px 20px;
+                    }
+                    a {
+                        padding: 5px 0;
+                    }
+                }
+            }
+            .menus {
+                padding: 5px 0;
+                position: relative;
+                background-color: $marrom;
+                z-index: 10;
+            }
+            .sub-menus {
+                color: $laranjado;
+                font-weight: 500;
+                font-size: 18px;
+                img {
+                    vertical-align: middle;
+                    margin-left: 10px;
+                    transition: $transicao;
+                }
+            }
+        }
+    }
+    .mostrar-menu {
+        ul {
+            height: auto !important;
+            visibility: visible !important;
+            top: 0 !important;
+            opacity: 1 !important;
+        }
+        img {
+            transform: rotate(90deg);
+        }
+    }
+    .barra-lateral {
+        position: absolute;
+        right: 6px;
+        top: 0;
+        height: 100%;
+        overflow: hidden;
+        button {
+            position: absolute;
+            top: 0;
+            background-color: $marrom;
+            width: 100%;
+            height: 90px;
+            color: white;
+            font-weight: 600;
+            background-image: url(../img/menu-icone-fechar.svg);
+            background-repeat: no-repeat;
+            background-position: center 10px;
+            background-size: 50%;
+            cursor: pointer;
+            padding-top: 35px;
+            display: block;
+            z-index: 10;
+            transition: background-size 300ms; 
+            &:hover {
+                background-size: 40%;
+            }
+        }
+    }
+    .botoes {
+        .botao-voltar {
+            background-color: $laranjado;
+            padding: 10px 20px 12px 25px;
+            color: white;
+            font-weight: 600;
+            display: block;
+            width: fit-content;
+            &:hover {
+                img {
+                    left: -10px;
+                }
+            }
+            img {
+                vertical-align: middle;
+                margin-right: 10px;
+                transition: $transicao;
+                left: 0;
+                position: relative;
+            }
+        }
+        .botao-ficha {
+            padding: 5px 15px;
+            border: 2px solid $laranjado;
+            color: white;
+            font-weight: 600;
+            display: block;
+            width: fit-content;
+            margin-top: 30px;
+            transition: $transicao;
+            &:hover {
+                background-color: $laranjado;
+            }
+        }
+    }
+}
+
+.ativa { 
+    left: 0 !important;
+    z-index: 10 !important; 
+    .padroes {
+        position: relative;
+        &:nth-child(2) {
+            animation: padrao1 8s infinite 2s;
+            top: -315px
+        }
+        &:nth-child(3) {
+            top: 0px;
+            animation: padrao2 8s infinite 2s;
+        }
+        @keyframes padrao1 {
+          0% {top: -315px;}
+          75% {top: 26px;}
+          100% {top: 26px;}
+        }
+        @keyframes padrao2 {
+          0% {top: 0px;}
+          12% {top: 0px;}
+          88% {top: -341px;}
+          100% {top: -341px;}
+        }
+    }
+}
+
+.bloco-intro {
+    height: 100vh;
+    align-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    .bloco-inicial {
+        @media(min-width: $smart-maior) {
+            max-width: 560px;
+            margin-left: 120px;
+        } 
+        > img, > p {
+            margin-bottom: 60px;
+        }  
+        .botao-iniciar {
+            background-color: $laranjado;
+            padding: 10px 20px 12px 25px;
+            color: white;
+            font-weight: 600;
+            display: inline-block;
+            width: fit-content; 
+            &:first-child {
+                margin-right: 40px
+            }
+            &:hover {
+                img {
+                    left: 10px;
+                }
+            }
+            img {
+                vertical-align: middle;
+                transform: rotate(180deg);
+                position: relative;
+                transition: $transicao;
+                left: 0;
+                margin-left: 10px;
+            }
+        }
+        .botao-ficha {
+            padding: 5px 15px;
+            border: 2px solid $marrom;
+            color: $marrom;
+            font-weight: 600;
+            display: block;
+            width: fit-content;
+            margin-top: 40px;
+            transition: color 0ms, background-color 400ms;
+            &:hover {
+                background-color: $marrom;
+                color: white;
+            }
+        }
+    }
+    #animacao-inicio  {
+        height: 506px;
+        width: 720px;
+        background-color: $marrom;
+        border-left: 6px solid $marrom;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        right: -460px;
+        padding: 40px 0;
+        overflow: hidden;
+        @media(max-width: $smart-maior) {
+            display: none;
+        }
+        img {
+            height: 48px;
+            max-width: unset;
+            margin-bottom: 6px;
+            position: relative;
+            &:last-child {
+                margin-bottom: unset;
+            }
+            &:nth-child(even) {
+                left: -32px;
+            }
+            &:nth-child(1) {
+                animation: padrao3 10s infinite;
+            }
+            &:nth-child(2) {
+                animation: padrao4 10s infinite;
+            }
+            &:nth-child(4) {
+                animation: padrao5 10s infinite;
+                left: -246px
+            }
+            &:nth-child(5) {
+                animation: padrao6 10s infinite;
+            }
+            &:nth-child(7) {
+                animation: padrao7 10s infinite;
+            }
+            &:nth-child(8) {
+                animation: padrao8 10s infinite;
+            }
+            @keyframes padrao3 {
+              0% {left: 0px;}
+              40% {left: -246px;}
+              100% {left: -246px;}
+            }
+            @keyframes padrao4 {
+              0% {left: -278px;}
+              30% {left: -278px;}
+              70% {left: -32px;}
+              100% {left: -32px;}
+            }
+            @keyframes padrao5 {
+              0% {left: -278px;}
+              10% {left: -278px;}
+              50% {left: -32px;}
+              100% {left: -32px;}
+            }
+            @keyframes padrao6 {
+              0% {left: 0px;}
+              40% {left: 0px;}
+              80% {left: -246px;}
+              100% {left: -246px;}
+            }
+            @keyframes padrao7 {
+                0% {left: 0px;}
+                20% {left: 0px;}
+                60% {left: -246px;}
+                100% {left: -246px;}
+            }
+            @keyframes padrao8 {
+              0% {left: -278px;}
+              50% {left: -278px;}
+              90% {left: -32px;}
+              100% {left: -32px;}
+            }
+        }
+    }
+}
+
+.barra-progresso {
+    width: 100%;
+    height: 10px;
+    background-color: white;
+    z-index: 2;
+    .barra {
+        height: 10px;
+        background-repeat: no-repeat;
+        background-position: center left;
+        position: fixed;
+        background-color: white;
+    }
+}
+
+.corpo-texto {
+    margin: 100px auto;
+    .titulo {
+        h1 {
+            color: $marrom;
+            .numeracao {
+                color: $laranjado;
+                font-weight: 500;
+            }
+        }
+        img {
+            margin: 30px auto 60px;
+            @media (max-width: $smart-maior) {
+                height: 30px;
+                object-fit: cover;
+            }
+        }
+    }
+
+    h3 {
+        color: $marrom;
+    }
+
+    b {
+        color: $laranjado;
+        font-weight: 700;
+    }
+
+    table {
+        width: 100%;
+        margin: 40px auto;
+        text-align: center;
+        font-size: 14px;
+        @media (max-width: $smart-maior) {
+            overflow-x: scroll;
+            white-space: nowrap;
+            display: block;
+        }
+        td {
+            border: 1px solid $cinzaborda;
+            padding: 12px 6px;
+        }
+
+        th, .primeira-coluna tr td:first-child {
+            background-color: $marrom;
+            color: white;
+            font-weight: 700;
+            border: 1px solid #541D1D;
+            padding: 12px 6px;
+        }
+
+        .blank {
+            border: unset !important;
+            background-color: white !important;
+        }
+
+        .titulo-tabela { 
+            background-color: white;
+            border: 1px solid $laranjado;
+            color: $laranjado;
+            padding: 6px;
+        }
+    }
+    @media (min-width: $smart-maior) {
+        p, h3, ul {
+            max-width: $artigo;
+            margin: 0 auto 20px;
+        }
+        table {
+            max-width: $tabela;
+        }
+    }
+    .paginacao {
+            left: 82%;
+            position: relative;
+            display: block;
+            margin-bottom: 1.8em;
+            @media (max-width: $smart-maior) {
+                left: 60%;
+            }
+            img {
+                vertical-align: middle;
+                margin-right: 15px;
+            }
+            &:after {
+                width: 420px;
+                height: 1px;
+                background-color: #B2B2B2;
+                right: calc(100% + 20px);
+                top: 18px;
+                position: absolute;
+                display: block;
+                content: "";
+                @media (max-width: $smart-maior) {
+                    width: calc(30% + 80px);
+                }
+            }
+    }
+}
+
+.navegacao {
+    margin-top: 80px;
+    .anterior, .proximo {
+        background-color: $marrom;
+        color: white;
+        font-weight: 600;
+        padding: 6px 18px;
+        margin-bottom: 40px;
+        position: relative;
+        @media (max-width: $smart-maior) {
+            display: block;
+            margin: 0 auto 30px;
+            width: fit-content;
+        }
+        img {
+            vertical-align: middle;
+            position: relative;
+            left: 0;
+            transition: $transicao;
+            width: 12px;
+        }
+    }
+    .anterior {
+        &:hover {
+            img {
+                left: -10px;
+            }
+        }
+        img {
+            transform: rotate(180deg);
+            margin-right: 8px;
+            @media (max-width: $smart-maior) {
+                position: absolute;
+                left: 10px;
+                top: 50%;
+                transform: translate(0, -50%) rotate(180deg);
+            }
+        }
+
+        @media (min-width: $smart-maior) {
+            float: left;
+        }
+        @media (max-width: $smart-maior) {
+            padding: 6px 18px 6px 40px;
+        }
+    }
+    .proximo {
+        &:hover {
+            img {
+                left: 10px;
+            }
+        }
+
+        img {
+            margin-left: 8px;
+            @media (max-width: $smart-maior) {
+                position: absolute;
+                left: 90%;
+                top: 50%;
+                transform: translate(0, -50%);
+            }
+        }
+        @media (max-width: $smart-maior) {
+            padding: 6px 40px 6px 18px;
+        }
+
+        @media (min-width: $smart-maior) {
+             float: right;
+        }    
+    }
+}
