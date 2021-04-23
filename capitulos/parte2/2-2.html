@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Dicionário Noke Koĩ - Português</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../../assets/css/layout.css">
+	<base href="../../index.html">
+</head>
+<body>
+	<header id="menu-barra" class="container">
+		<button id="abrir-menu" aria-controls="menu-aberto">Menu</button>
+	</header>
+	<section id="menu-aberto" aria-expanded="false">
+		<div class="barra-lateral">
+			<button id="fechar-menu" tabindex="-1">Fechar</button>
+			<img class="padroes" src="./assets/img/menu-aberto-padrao.svg" alt="" aria-hidden="true">
+			<img class="padroes" src="./assets/img/menu-aberto-padrao.svg" alt="" aria-hidden="true">
+		</div>
+		<div class="itens-menu">
+			<a href="#">
+				<img src="./assets/img/menu-logo.svg" role="logo" alt="">
+			</a>
+			<ul role="tree">
+				<li class="fechar-menu" role="treeitem">
+					<a class="menus" href="capitulos/prefacio.html" tabindex="-1">Prefácio</a>
+				</li>
+				<li class="fechar-menu" role="treeitem">
+					<a class="menus" href="capitulos/apresentacao.html" tabindex="-1">Apresentação</a>
+				</li>
+				<li class="fechar-menu" role="treegrid">
+					<a class="menus expandir" tabindex="-1">Parte I <span class="sub-menus">∙ Grupo e Língua <img src="./assets/img/seta.svg"></span></a>
+					<ul class="sub-menu" role="tree" aria-expanded="false">
+						<li role="treeitem">
+							<a href="capitulos/parte1/introducao.html">Txitxa vii txai / Introdução</a>
+						</li>
+						<li role="treeitem">
+							<a href="capitulos/parte1/1.html">1. Noke Koĩ/Grupo Noke Koĩ</a>
+						</li>
+						<li role="treeitem">
+							<a href="capitulos/parte1/2.html">2. Estrutura básica da língua - Abreviaturas e convenções</a>
+						</li>
+						<li role="treeitem">
+							<a href="capitulos/parte1/2-1.html">2.1. Fonemas, grafias e estrutura silábica</a>
+						</li>
+						<li role="treeitem">
+							<a href="capitulos/parte1/2-2.html">2.2. Acento tônico</a>
+						</li>
+						<li role="treeitem">
+							<a href="capitulos/parte1/2-3.html">2.3. Nasalidade</a>
+						</li>
+						<li role="treeitem">
+							<a href="capitulos/parte1/2-4.html">2.4. Item Lexical (IL) e Item Afixal (IA)</a>
+						</li>
+						<li role="treeitem">
+							<a href="capitulos/parte1/2-5.html">2.5. Empréstimos</a>
+						</li>
+						<li role="treeitem">
+							<a href="capitulos/parte1/2-6.html">2.6. Número e Pessoa</a>
+						</li>
+						<li role="treeitem">
+							<a href="capitulos/parte1/2-7.html">2.7. Ordem dos constituintes</a>
+						</li>
+						<li role="treeitem">
+							<a href="capitulos/parte1/consideracoes.html">Considerações</a>
+						</li>
+					</ul>
+				</li>
+				<li class="fechar-menu" role="treegrid">
+					<a class="menus expandir" tabindex="-1">Parte II <span class="sub-menus" tabindex="-1">∙ Dicionário <img src="./assets/img/seta.svg"></span></a>
+					<ul class="sub-menu" role="tree" aria-expanded="false">
+						<li role="treeitem">
+							<a href="capitulos/parte2/1.html">1. Notas explicativas</a>
+						</li>
+						<li role="treeitem">
+							<a href="capitulos/parte2/2.html">2. Entradas</a>
+						</li>
+						<li role="treeitem">
+							<a href="capitulos/parte2/2-1.html">2.1 Noke Koĩ - Português</a>
+						</li>
+						<li role="treeitem">
+							<a href="capitulos/parte2/2-2.html">2.2 Português - Noke Koĩ</a>
+						</li>
+						<li role="treeitem">
+							<a href="capitulos/parte2/3.html">3. Mapas</a>
+						</li>
+						<li role="treeitem">
+							<a href="capitulos/parte2/4.html">4. Kene shovi-ma xia noke-vo/Autores dos desenhos</a>
+						</li>
+					</ul>
+				</li>
+				<li class="fechar-menu" role="treeitem">
+					<a class="menus" href="capitulos/referencias.html" tabindex="-1">Referências</a>
+				</li>
+			</ul>
+		</div>
+		<div class="botoes">
+			<a class="botao-voltar" href="index.html" tabindex="-1">
+				<span class="voltar"><img src="./assets/img/seta-voltar.svg"></span> Voltar ao início
+			</a>
+			<a class="botao-ficha" href="fichatecnica.html" tabindex="-1">
+				Ficha Técnica
+			</a>
+		</div>
+	</section>
+	<div class="barra-progresso" aria-hidden="true">
+		<div class="barra" id="padrao" style="background-image: url(../assets/img/barra-progresso.svg);"></div>
+	</div>
+	<section class="container corpo-texto" style="margin-bottom: 40px;">
+		<div class="titulo">
+			<h1><span class="numeracao">2.2 ∙</span> Português <img src="../assets/img/seta-titulo.svg" aria-hidden="true"> Noke Koĩ</h1>
+			<img src="../assets/img/capitulos-padrao-titulo.svg">
+		</div>
+	</section>
+	<section class="container dicionario">
+		<input type="search" name="Pesquisar" id="pesquisa" placeholder="Pesquise a palavra em português...">
+		<button id="limpar"><img src="../assets/img/menu-icone-fechar.svg" />Limpar busca</button>
+		<div class="filtros-letra esconder-pesquisa pt">
+			<a href="#A">A</a>
+			<a href="#B">B</a>
+			<a href="#C">C</a>
+			<a href="#D">D</a>
+			<a href="#E">E</a>
+			<a href="#F">F</a>
+			<a href="#G">G</a>
+			<a href="#H">H</a>
+			<a href="#I">I</a>
+			<a href="#J">J</a>
+			<a href="#L">L</a>
+			<a href="#M">M</a>
+			<a href="#N">N</a>
+			<a href="#O">O</a>
+			<a href="#P">P</a>
+			<a href="#Q">Q</a>
+			<a href="#R">R</a>
+			<a href="#S">S</a>
+			<a href="#T">T</a>
+			<a href="#U">U</a>
+			<a href="#V">V</a>
+			<a href="#X">X</a>
+			<a href="#Z">Z</a>
+		</div>
+		<div id="A" class="capa-letra esconder-pesquisa">
+			<span class="letra">A</span>
+		</div>
+		<table class="dicionario primeira-tabela">
+			<thead class="portugues">
+				<tr>
+					<th>Português</th>
+					<th>Classificação</th>
+					<th>Noke Koĩ</th>
+					<th>Fonológico</th>
+					<th>Exemplo Português</th>
+					<th>Exemplo Noke Koĩ</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td data-label="Português">Fazer</td>
+					<td data-label="Classificação">V <button data-toggle="tooltip" title="Verbo">?</button></td>
+					<td data-label="Noke Koĩ">Aa</td>
+					<td data-label="Fonológico">/aa/</td>
+					<td data-label="Exemplo Português">Os homens <b>fizeram</b> buraco para amassar o tingui.</td>
+					<td data-label="Exemplo Noke Koĩ">Honĩ-vo asha rõki <b>aa</b> vai.</td>
+				</tr>
+			</tbody>
+		</table>
+		<p class="sem-resultados">Não encontramos nenhuma palavra, faça uma nova pesquisa.</p>
+		<div class="fixartopo">
+			<table id="topodicionario">
+				<tbody>
+					<tr>
+						<td>Aa</td>
+						<td>/aa/</td>
+						<td>V <button class="tooltip" title="Verbo">?</button></td>
+						<td>Fazer</td>
+						<td>Honĩ-vo asha rõki <b>aa</b> vai.</td>
+						<td>Os homens <b>fizeram</b> buraco para amassar o tingui.</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<section class="container navegacao">
+		<a class="anterior" href="#">
+			<img src="../assets/img/seta.svg"> Capítulo Anterior 
+		</a>
+		<a class="proximo" href="#">
+			Próximo Capítulo <img src="../assets/img/seta.svg">
+		</a>
+	</section>
+	<footer id="footer">
+		<script src="../assets/js/jquery.js" type="text/javascript"></script>
+		<script src="../assets/js/scripts.js" type="text/javascript"></script>
+		<script src="../assets/js/inert.js" type="text/javascript"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<script>
+			$(document).ready(function(){
+			  $('[data-toggle="tooltip"]').tooltip();   
+			});
+		</script>
+	</footer>
+</body>
+</html>

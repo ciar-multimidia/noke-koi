@@ -11,6 +11,7 @@ $preto: #111;
 $marrom: #1D0000;
 $cinza: #3E3E3E;
 $cinzatabela: #F3F2F2;
+$cinzatabelahover: #DEDEDE;
 $cinzaborda: #B2B2B2;
 $laranjado: #CC3E00;
 $transicao: all 400ms;
@@ -21,9 +22,15 @@ $fonte-padrao: 'Barlow',sans-serif;
 $fonte-titulos: 'Barlow',sans-serif;
 
 
+///////// ACESSIBILIDADE
+$focus: 2px solid black;
+$focus2: 2px solid white;
+
+
 /////// MEDIA QUERIES e TAMANHOS
 $container: 1140px;
 $tablet: 990px;
+$desktophd: 1400px;
 $smart-maior: 680px;
 $smart-menor: 500px;
 $celular: 380px;
@@ -200,4 +207,19 @@ button.botao {
 
 .floatleft {float: left; margin: 0 1em 1em 0 !important;}
 .floatright {float: right; margin: 0 0 1em 1em !important;}
+
+
+///// ACESSIBILIDADE
+
+[inert] {
+  pointer-events: none;
+  cursor: default;
+}
+
+[inert], [inert] * {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
 

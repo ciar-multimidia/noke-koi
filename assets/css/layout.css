@@ -65,9 +65,6 @@ img {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box; }
 
-button {
-  outline: none; }
-
 /****************************************
  * FERRAMENTAS DE MIXINS *
  ****************************************/
@@ -996,6 +993,16 @@ button.botao {
   float: right;
   margin: 0 0 1em 1em !important; }
 
+[inert] {
+  pointer-events: none;
+  cursor: default; }
+
+[inert], [inert] * {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none; }
+
 body, html {
   overflow-x: hidden; }
   body.no-scroll, html.no-scroll {
@@ -1070,12 +1077,20 @@ body {
       height: 100%;
       background-image: url(../img/menu-desktop-padrao.svg);
       background-position: center 90px; } }
+  @media (max-width: 1400px) {
+    #menu-barra {
+      width: 60px;
+      background-size: 85%; }
+      #menu-barra button {
+        background-size: 90% !important; } }
   @media (max-width: 680px) {
     #menu-barra {
       height: 60px;
       background-image: url(../img/menu-mobile-padrao.svg);
       background-position: center;
-      padding: unset; } }
+      background-size: auto;
+      padding: unset;
+      width: 100%; } }
   #menu-barra button {
     color: white;
     font-weight: 600;
@@ -1085,7 +1100,7 @@ body {
     background-size: 100%;
     cursor: pointer;
     transition: all 400ms; }
-    #menu-barra button:hover {
+    #menu-barra button:hover, #menu-barra button:focus {
       background-size: 75%;
       background-position: center 5px; }
     @media (min-width: 680px) {
@@ -1101,7 +1116,7 @@ body {
         width: 80px;
         background-position: center 10px;
         background-color: #1D0000;
-        background-size: 40%; }
+        background-size: 40% !important; }
         #menu-barra button:hover {
           background-size: 35%; } }
 
@@ -1115,19 +1130,25 @@ body {
   position: fixed; }
   @media (min-width: 680px) {
     #menu-aberto {
-      width: 420px;
-      left: -330px; } }
+      width: 460px;
+      left: -370px; } }
+  @media (max-width: 1400px) {
+    #menu-aberto {
+      left: -410px; } }
   @media (max-width: 680px) {
     #menu-aberto {
       width: 100%;
       left: -100%; } }
   #menu-aberto .itens-menu {
     overflow-y: scroll;
-    width: 80%;
+    width: 85%;
     margin-bottom: 40px; }
     @media (min-width: 680px) {
       #menu-aberto .itens-menu {
         height: 65vh; } }
+    @media (min-height: 860px) {
+      #menu-aberto .itens-menu {
+        height: 75vh; } }
     @media (max-width: 680px) {
       #menu-aberto .itens-menu {
         height: 72vh; } }
@@ -1159,14 +1180,29 @@ body {
           opacity: 0; }
           #menu-aberto .itens-menu > ul li .sub-menu li {
             padding: unset;
-            margin: 5px 0 5px 20px; }
+            margin: 10px 0 10px 20px; }
           #menu-aberto .itens-menu > ul li .sub-menu a {
-            padding: 5px 0; }
+            padding: 5px 0;
+            transition: all 400ms; }
+            #menu-aberto .itens-menu > ul li .sub-menu a:hover, #menu-aberto .itens-menu > ul li .sub-menu a:focus {
+              background-color: #CC3E00;
+              color: white;
+              padding: 5px 10px; }
       #menu-aberto .itens-menu > ul .menus {
         padding: 5px 0;
         position: relative;
         background-color: #1D0000;
-        z-index: 10; }
+        z-index: 10;
+        transition: all 400ms;
+        cursor: pointer; }
+        #menu-aberto .itens-menu > ul .menus:hover, #menu-aberto .itens-menu > ul .menus:focus {
+          background-color: #CC3E00;
+          color: white;
+          padding: 5px 10px; }
+          #menu-aberto .itens-menu > ul .menus:hover .sub-menus, #menu-aberto .itens-menu > ul .menus:focus .sub-menus {
+            color: white; }
+            #menu-aberto .itens-menu > ul .menus:hover .sub-menus img, #menu-aberto .itens-menu > ul .menus:focus .sub-menus img {
+              filter: brightness(0); }
       #menu-aberto .itens-menu > ul .sub-menus {
         color: #CC3E00;
         font-weight: 500;
@@ -1205,7 +1241,7 @@ body {
       display: block;
       z-index: 10;
       transition: background-size 300ms; }
-      #menu-aberto .barra-lateral button:hover {
+      #menu-aberto .barra-lateral button:hover, #menu-aberto .barra-lateral button:focus {
         background-size: 40%; }
   #menu-aberto .botoes .botao-voltar {
     background-color: #CC3E00;
@@ -1214,8 +1250,10 @@ body {
     font-weight: 600;
     display: block;
     width: fit-content; }
-    #menu-aberto .botoes .botao-voltar:hover img {
+    #menu-aberto .botoes .botao-voltar:hover img, #menu-aberto .botoes .botao-voltar:focus img {
       left: -10px; }
+    #menu-aberto .botoes .botao-voltar:focus {
+      outline: 2px solid white; }
     #menu-aberto .botoes .botao-voltar img {
       vertical-align: middle;
       margin-right: 10px;
@@ -1231,8 +1269,10 @@ body {
     width: fit-content;
     margin-top: 30px;
     transition: all 400ms; }
-    #menu-aberto .botoes .botao-ficha:hover {
+    #menu-aberto .botoes .botao-ficha:hover, #menu-aberto .botoes .botao-ficha:focus {
       background-color: #CC3E00; }
+    #menu-aberto .botoes .botao-ficha:focus {
+      outline: 2px solid white; }
 
 .ativa {
   left: 0 !important;
@@ -1281,8 +1321,10 @@ body {
     width: fit-content; }
     .bloco-intro .bloco-inicial .botao-iniciar:first-child {
       margin-right: 40px; }
-    .bloco-intro .bloco-inicial .botao-iniciar:hover img {
+    .bloco-intro .bloco-inicial .botao-iniciar:hover img, .bloco-intro .bloco-inicial .botao-iniciar:focus img {
       left: 10px; }
+    .bloco-intro .bloco-inicial .botao-iniciar:focus {
+      outline: 2px solid black; }
     .bloco-intro .bloco-inicial .botao-iniciar img {
       vertical-align: middle;
       transform: rotate(180deg);
@@ -1299,9 +1341,11 @@ body {
     width: fit-content;
     margin-top: 40px;
     transition: color 0ms, background-color 400ms; }
-    .bloco-intro .bloco-inicial .botao-ficha:hover {
+    .bloco-intro .bloco-inicial .botao-ficha:hover, .bloco-intro .bloco-inicial .botao-ficha:focus {
       background-color: #1D0000;
       color: white; }
+    .bloco-intro .bloco-inicial .botao-ficha:focus {
+      outline: 2px solid black; }
   .bloco-intro #animacao-inicio {
     height: 506px;
     width: 720px;
@@ -1409,17 +1453,19 @@ body {
     .corpo-texto .titulo h1 .numeracao {
       color: #CC3E00;
       font-weight: 500; }
-  .corpo-texto .titulo img {
+    .corpo-texto .titulo h1 img {
+      vertical-align: middle; }
+  .corpo-texto .titulo > img {
     margin: 30px auto 60px; }
     @media (max-width: 680px) {
-      .corpo-texto .titulo img {
+      .corpo-texto .titulo > img {
         height: 30px;
         object-fit: cover; } }
   .corpo-texto h3 {
     color: #1D0000; }
   .corpo-texto b {
     color: #CC3E00;
-    font-weight: 700; }
+    font-weight: 800; }
   .corpo-texto table {
     width: 100%;
     margin: 40px auto;
@@ -1448,7 +1494,7 @@ body {
       color: #CC3E00;
       padding: 6px; }
   @media (min-width: 680px) {
-    .corpo-texto p, .corpo-texto h3, .corpo-texto ul {
+    .corpo-texto p, .corpo-texto h3, .corpo-texto ul, .corpo-texto .numero-pessoa {
       max-width: 680px;
       margin: 0 auto 20px; }
     .corpo-texto table {
@@ -1476,6 +1522,284 @@ body {
       @media (max-width: 680px) {
         .corpo-texto .paginacao:after {
           width: calc(30% + 80px); } }
+  .corpo-texto .numero-pessoa {
+    width: auto;
+    margin: auto; }
+    .corpo-texto .numero-pessoa table {
+      width: auto;
+      margin: unset; }
+      .corpo-texto .numero-pessoa table tr:first-child td {
+        color: #1D0000;
+        font-weight: 600; }
+        .corpo-texto .numero-pessoa table tr:first-child td b {
+          color: #1D0000; }
+      .corpo-texto .numero-pessoa table td {
+        border: unset;
+        padding: 0 10px;
+        font-size: 18px; }
+    .corpo-texto .numero-pessoa p {
+      font-style: italic; }
+
+.dicionario input[type="search"] {
+  font-size: 16px;
+  padding: 10px 20px 10px 40px;
+  max-width: 380px;
+  width: 100%;
+  font-weight: 500;
+  color: #1D0000;
+  border: 1px solid #1D0000;
+  background-image: url(../img/pesquisa.svg);
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  font-family: "Barlow", sans-serif;
+  margin-bottom: 40px; }
+  @media (max-width: 680px) {
+    .dicionario input[type="search"] {
+      margin-bottom: 10px; } }
+.dicionario #limpar {
+  display: none;
+  color: white;
+  background-color: #CC3E00;
+  padding: 5px 20px;
+  font-weight: 600; }
+  @media (min-width: 680px) {
+    .dicionario #limpar {
+      margin-left: 20px; } }
+  .dicionario #limpar img {
+    width: 15px;
+    float: left;
+    padding-top: 8px;
+    margin-right: 10px; }
+@media (min-width: 680px) {
+  .dicionario .filtros-letra {
+    width: 50%;
+    float: right;
+    text-align: left; } }
+.dicionario .filtros-letra a {
+  padding: 5px;
+  margin: 0 1px;
+  transition: color 100ms; }
+  .dicionario .filtros-letra a:hover, .dicionario .filtros-letra a:active {
+    background-color: #CC3E00;
+    color: white; }
+@media (min-width: 680px) {
+  .dicionario .pt {
+    width: 60%; } }
+.dicionario #A {
+  background-image: url(../img/a.png); }
+.dicionario #E {
+  background-image: url(../img/e.png); }
+@media (min-width: 680px) {
+  .dicionario .capa-letra {
+    height: 180px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: 30px 0;
+    z-index: 1;
+    background-color: white; } }
+@media (max-width: 680px) {
+  .dicionario .capa-letra {
+    height: 120px;
+    background-position: center left;
+    background-size: cover;
+    position: relative;
+    margin: 30px 0;
+    z-index: 1;
+    background-color: white; } }
+.dicionario .capa-letra .letra {
+  background-color: #1D0000;
+  color: white;
+  font-size: 32px;
+  padding: 10px;
+  font-weight: 700;
+  position: relative; }
+  @media (min-width: 680px) {
+    .dicionario .capa-letra .letra {
+      top: 30%;
+      transform: translate(0, -50%); } }
+  @media (max-width: 680px) {
+    .dicionario .capa-letra .letra {
+      top: 30%;
+      transform: translate(0, -50%); } }
+.dicionario .fixartopo {
+  position: fixed;
+  top: 0px;
+  display: none;
+  background-color: white;
+  max-width: 1120px;
+  width: 100%;
+  height: 70px;
+  overflow: hidden; }
+  .dicionario .fixartopo tbody {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    width: 1px; }
+  @media (max-width: 680px) {
+    .dicionario .fixartopo {
+      display: none; } }
+.dicionario table, .dicionario #topodicionario {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0px 10px; }
+  @media (max-width: 680px) {
+    .dicionario table, .dicionario #topodicionario {
+      border-spacing: 0px 20px; } }
+  @media (max-width: 680px) {
+    .dicionario table thead, .dicionario #topodicionario thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px; } }
+  .dicionario table thead tr th, .dicionario #topodicionario thead tr th {
+    text-align: left;
+    font-weight: 600;
+    color: #CC3E00;
+    padding: 10px; }
+  @media (min-width: 680px) {
+    .dicionario table .nokekoi tr th:nth-child(1), .dicionario #topodicionario .nokekoi tr th:nth-child(1) {
+      width: 180px; }
+    .dicionario table .nokekoi tr th:nth-child(2), .dicionario #topodicionario .nokekoi tr th:nth-child(2) {
+      width: 180px; }
+    .dicionario table .nokekoi tr th:nth-child(3), .dicionario #topodicionario .nokekoi tr th:nth-child(3) {
+      width: 140px; }
+    .dicionario table .nokekoi tr th:nth-child(4), .dicionario #topodicionario .nokekoi tr th:nth-child(4) {
+      width: 120px; }
+    .dicionario table .nokekoi tr th:nth-child(5), .dicionario #topodicionario .nokekoi tr th:nth-child(5) {
+      width: 230px; }
+    .dicionario table .nokekoi tr th:nth-child(6), .dicionario #topodicionario .nokekoi tr th:nth-child(6) {
+      width: 270px; } }
+  @media (min-width: 680px) {
+    .dicionario table .portugues tr th:nth-child(1), .dicionario #topodicionario .portugues tr th:nth-child(1) {
+      width: 120px; }
+    .dicionario table .portugues tr th:nth-child(2), .dicionario #topodicionario .portugues tr th:nth-child(2) {
+      width: 140px; }
+    .dicionario table .portugues tr th:nth-child(3), .dicionario #topodicionario .portugues tr th:nth-child(3) {
+      width: 180px; }
+    .dicionario table .portugues tr th:nth-child(4), .dicionario #topodicionario .portugues tr th:nth-child(4) {
+      width: 180px; }
+    .dicionario table .portugues tr th:nth-child(5), .dicionario #topodicionario .portugues tr th:nth-child(5) {
+      width: 270px; }
+    .dicionario table .portugues tr th:nth-child(6), .dicionario #topodicionario .portugues tr th:nth-child(6) {
+      width: 230px; } }
+  @media (max-width: 680px) {
+    .dicionario table tr, .dicionario #topodicionario tr {
+      display: block;
+      margin-bottom: .625em; } }
+  @media (max-width: 680px) {
+    .dicionario table td, .dicionario #topodicionario td {
+      border-bottom: 1px solid #B2B2B2;
+      display: block;
+      text-align: right; }
+      .dicionario table td:last-child, .dicionario #topodicionario td:last-child {
+        border-bottom: unset; }
+      .dicionario table td:first-child, .dicionario #topodicionario td:first-child {
+        color: #CC3E00;
+        font-weight: 700;
+        font-size: 18px; }
+      .dicionario table td:before, .dicionario #topodicionario td:before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        font-size: 12px;
+        text-transform: uppercase;
+        color: #1D0000;
+        line-height: 2em; } }
+  .dicionario table tbody tr, .dicionario #topodicionario tbody tr {
+    background-color: #F3F2F2;
+    transition: all 400ms; }
+    @media (min-width: 680px) {
+      .dicionario table tbody tr:hover, .dicionario #topodicionario tbody tr:hover {
+        background-color: #DEDEDE; } }
+    .dicionario table tbody tr td, .dicionario #topodicionario tbody tr td {
+      padding: 20px 10px; }
+      @media (min-width: 680px) {
+        .dicionario table tbody tr td:first-child, .dicionario #topodicionario tbody tr td:first-child {
+          padding-left: 20px; }
+        .dicionario table tbody tr td:last-child, .dicionario #topodicionario tbody tr td:last-child {
+          padding-right: 20px; } }
+      @media (min-width: 680px) {
+        .dicionario table tbody tr td:nth-child(1), .dicionario #topodicionario tbody tr td:nth-child(1) {
+          width: 180px; }
+        .dicionario table tbody tr td:nth-child(2), .dicionario #topodicionario tbody tr td:nth-child(2) {
+          width: 180px; }
+        .dicionario table tbody tr td:nth-child(3), .dicionario #topodicionario tbody tr td:nth-child(3) {
+          width: 140px; }
+        .dicionario table tbody tr td:nth-child(4), .dicionario #topodicionario tbody tr td:nth-child(4) {
+          width: 120px; }
+        .dicionario table tbody tr td:nth-child(5), .dicionario #topodicionario tbody tr td:nth-child(5) {
+          width: 230px; }
+        .dicionario table tbody tr td:nth-child(6), .dicionario #topodicionario tbody tr td:nth-child(6) {
+          width: 270px; } }
+      .dicionario table tbody tr td button, .dicionario #topodicionario tbody tr td button {
+        background-color: #B2B2B2;
+        font-size: 12px;
+        line-height: 1em;
+        font-weight: 700;
+        color: #1D0000;
+        border-radius: 50px;
+        height: 18px;
+        width: 18px; }
+      .dicionario table tbody tr td .tooltip, .dicionario #topodicionario tbody tr td .tooltip {
+        position: absolute;
+        z-index: 1070;
+        display: block;
+        line-height: 1.42857143;
+        line-break: auto;
+        text-align: left;
+        text-align: start;
+        filter: alpha(opacity=0);
+        opacity: 0; }
+        .dicionario table tbody tr td .tooltip .tooltip-arrow, .dicionario #topodicionario tbody tr td .tooltip .tooltip-arrow {
+          border-top-color: #1D0000;
+          position: absolute;
+          width: 0;
+          height: 0;
+          border-style: solid; }
+      .dicionario table tbody tr td .tooltip-inner, .dicionario #topodicionario tbody tr td .tooltip-inner {
+        background-color: #1D0000;
+        font-family: "Barlow", sans-serif;
+        font-size: 16px;
+        max-width: 200px;
+        padding: 3px 8px;
+        color: #fff;
+        text-align: center;
+        border-radius: 4px; }
+      .dicionario table tbody tr td .in, .dicionario #topodicionario tbody tr td .in {
+        filter: alpha(opacity=90);
+        opacity: .9; }
+      .dicionario table tbody tr td .top, .dicionario #topodicionario tbody tr td .top {
+        padding: 5px 0;
+        margin-top: -3px; }
+        .dicionario table tbody tr td .top .tooltip-arrow, .dicionario #topodicionario tbody tr td .top .tooltip-arrow {
+          bottom: 0;
+          left: 50%;
+          margin-left: -5px;
+          border-width: 5px 5px 0;
+          border-top-color: #1D0000; }
+      .dicionario table tbody tr td .tooltip-arrow, .dicionario #topodicionario tbody tr td .tooltip-arrow {
+        border-color: transparent; }
+.dicionario .sem-resultados {
+  display: none; }
+.dicionario .esconder {
+  border: none;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  width: 1px; }
+.dicionario .ajuste-margin {
+  margin-top: -10px; }
 
 .navegacao {
   margin-top: 80px; }
@@ -1530,5 +1854,28 @@ body {
   @media (min-width: 680px) {
     .navegacao .proximo {
       float: right; } }
+
+.sem-resultados {
+  background-color: #F3F2F2;
+  padding: 10px 20px; }
+
+@media (min-width: 680px) {
+  .ui-tooltip {
+    max-width: 1140px;
+    margin: auto;
+    left: unset !important; } }
+.ui-tooltip .ui-tooltip-content {
+  color: white;
+  background-color: #B2B2B2;
+  border-radius: 10px;
+  width: fit-content;
+  overflow: hidden;
+  position: relative;
+  top: -45px;
+  left: 100px;
+  padding: 4px 8px; }
+
+.ui-helper-hidden-accessible {
+  display: none; }
 
 /*# sourceMappingURL=layout.css.map */
