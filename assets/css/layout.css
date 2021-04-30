@@ -1041,7 +1041,7 @@ body {
     z-index: 1; }
   @media (max-width: 680px) {
     body {
-      font-size: 15px; } }
+      font-size: 16px; } }
 
 /****************************************
  * CONTAINER*
@@ -1461,21 +1461,45 @@ body {
       .corpo-texto .titulo > img {
         height: 30px;
         object-fit: cover; } }
+  .corpo-texto ul li b:first-child {
+    color: #CC3E00;
+    font-weight: 800; }
+  .corpo-texto .fonemas li b:first-child {
+    width: 30px;
+    display: inline-block; }
+  .corpo-texto .fonemas li span {
+    display: inline-block;
+    width: 40px; }
+  .corpo-texto .caracter {
+    position: relative; }
+    .corpo-texto .caracter .til {
+      position: absolute;
+      left: 13px; }
+    .corpo-texto .caracter .tabela {
+      left: 4px !important; }
+  .corpo-texto h2 {
+    color: #1D0000;
+    text-align: center;
+    margin-bottom: 15px; }
   .corpo-texto h3 {
     color: #1D0000; }
   .corpo-texto b {
-    color: #CC3E00;
-    font-weight: 800; }
+    font-weight: 700; }
+  .corpo-texto .legenda {
+    font-size: 12px; }
   .corpo-texto table {
     width: 100%;
-    margin: 40px auto;
+    margin: 40px auto 10px;
     text-align: center;
-    font-size: 14px; }
+    font-size: 16px; }
     @media (max-width: 680px) {
       .corpo-texto table {
         overflow-x: scroll;
         white-space: nowrap;
         display: block; } }
+    .corpo-texto table caption {
+      margin-bottom: 10px;
+      font-size: 16px; }
     .corpo-texto table td {
       border: 1px solid #B2B2B2;
       padding: 12px 6px; }
@@ -1485,6 +1509,21 @@ body {
       font-weight: 700;
       border: 1px solid #541D1D;
       padding: 12px 6px; }
+    .corpo-texto table .coluna-custom {
+      padding: unset;
+      border-color: #B2B2B2;
+      color: #3E3E3E;
+      background-color: white; }
+      .corpo-texto table .coluna-custom .duas-linhas {
+        width: 100%;
+        display: block;
+        font-weight: 400;
+        padding: 12px; }
+        .corpo-texto table .coluna-custom .duas-linhas:last-child {
+          border-top: 1px solid #B2B2B2; }
+    .corpo-texto table .til {
+      left: 7px !important;
+      top: -5px; }
     .corpo-texto table .blank {
       border: unset !important;
       background-color: white !important; }
@@ -1537,6 +1576,9 @@ body {
         border: unset;
         padding: 0 10px;
         font-size: 18px; }
+        @media (max-width: 680px) {
+          .corpo-texto .numero-pessoa table td {
+            font-size: 16px; } }
     .corpo-texto .numero-pessoa p {
       font-style: italic; }
 
