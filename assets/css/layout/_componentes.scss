@@ -518,7 +518,6 @@
 
     h2 {
         color: $marrom;
-        text-align: center;
         margin-bottom: 15px;
     }
 
@@ -593,7 +592,7 @@
         }
     }
     @media (min-width: $smart-maior) {
-        p, h3, ul, .numero-pessoa {
+        p, h2, h3, ul, .numero-pessoa {
             max-width: $artigo;
             margin: 0 auto 20px;
         }
@@ -657,7 +656,11 @@
     }
 }
 
-.dicionario {
+.dicionariotopo {
+    margin-bottom: 120px;
+    @media (max-width: $smart-maior) {
+        margin-bottom: 60px;
+    }
     input[type="search"] {
         font-size: 16px;
         padding: 10px 20px 10px 40px;
@@ -692,31 +695,243 @@
         }
     }
     .filtros-letra {
+        @media (max-width: $smart-maior) {
+            margin-top: 40px;
+        }
         @media (min-width: $smart-maior) {
-            width: 50%;
+            width: fit-content;
             float: right;
             text-align: left;
         }
-        a {
+        button {
             padding: 5px;
             margin: 0 1px;
             transition: color 100ms;
+            cursor: pointer;
             &:hover, &:active {
                 background-color: $laranjado;
                 color: white; 
             }
         }
-    }
-    .pt {
-        @media (min-width: $smart-maior) {
-            width: 60%;
+
+        .mostrar {
+            background-color: $laranjado;
+            color: white;
+            font-weight: 600;
         }
     }
-    #A {
-        background-image: url(../img/a.png);
+
+    .secaoletra {
+        display: none;
+        .filtros-letra {
+            margin-top: 40px;
+        }
     }
+
+    #A {
+        .capa-letra {
+            background-image: url(../img/a.png);
+        }   
+    }
+
     #E {
-        background-image: url(../img/e.png);
+        .capa-letra {
+            background-image: url(../img/e.png);
+        } 
+    }
+
+    #H {
+        .capa-letra {
+            background-image: url(../img/h.png);
+        } 
+    }
+
+    #I {
+        .capa-letra {
+            background-image: url(../img/i.png);
+        } 
+    }
+
+    #K {
+        .capa-letra {
+            background-image: url(../img/k.png);
+        } 
+    }
+
+    #M {
+        .capa-letra {
+            background-image: url(../img/j.png);
+        } 
+    }
+
+    #N {
+        .capa-letra {
+            background-image: url(../img/n.png);
+        } 
+    }
+
+    #O {
+        .capa-letra {
+            background-image: url(../img/o.png);
+        } 
+    }
+
+    #P {
+        .capa-letra {
+            background-image: url(../img/p.png);
+        } 
+    }
+
+    #R {
+        .capa-letra {
+            background-image: url(../img/r.png);
+        } 
+    }
+
+    #S {
+        .capa-letra {
+            background-image: url(../img/s.png);
+        } 
+    }
+
+    #SH {
+        .capa-letra {
+            background-image: url(../img/sh.png);
+        } 
+    }
+
+    #T {
+        .capa-letra {
+            background-image: url(../img/t.png);
+        } 
+    }
+
+    #TS {
+        .capa-letra {
+            background-image: url(../img/ts.png);
+        } 
+    }
+
+    #TX {
+        .capa-letra {
+            background-image: url(../img/tx.png);
+        } 
+    }
+
+    #V {
+        .capa-letra {
+            background-image: url(../img/v.png);
+        } 
+    }
+
+    #W {
+        .capa-letra {
+            background-image: url(../img/w.png);
+        } 
+    }
+
+    #X {
+        .capa-letra {
+            background-image: url(../img/x.png);
+        } 
+    }
+
+    #Y {
+        .capa-letra {
+            background-image: url(../img/y.png);
+        } 
+    }
+
+    #APT {
+        background-image: url(../img/apt.png);
+    }
+
+    #BPT {
+        background-image: url(../img/bpt.png);
+    }
+
+    #CPT {
+        background-image: url(../img/cpt.png);
+    }
+
+    #DPT {
+        background-image: url(../img/dpt.png);
+    }
+
+    #EPT {
+        background-image: url(../img/ept.png);
+    }
+
+    #FPT {
+        background-image: url(../img/fpt.png);
+    }
+
+    #GPT {
+        background-image: url(../img/gpt.png);
+    }
+
+    #HPT {
+        background-image: url(../img/hpt.png);
+    }
+
+    #IPT {
+        background-image: url(../img/ipt.png);
+    }
+
+    #JPT {
+        background-image: url(../img/jpt.png);
+    }
+
+    #LPT {
+        background-image: url(../img/lpt.png);
+    }
+
+    #MPT {
+        background-image: url(../img/mpt.png);
+    }
+
+    #NPT {
+        background-image: url(../img/npt.png);
+    }
+
+    #OPT {
+        background-image: url(../img/opt.png);
+    }
+
+    #PPT {
+        background-image: url(../img/ppt.png);
+    }
+
+    #QPT {
+        background-image: url(../img/qpt.png);
+    }
+
+    #RPT {
+        background-image: url(../img/rpt.png);
+    }
+
+    #SPT {
+        background-image: url(../img/spt.png);
+    }
+
+    #TPT {
+        background-image: url(../img/tpt.png);
+    }
+
+    #UPT {
+        background-image: url(../img/upt.png);
+    }
+
+    #VPT {
+        background-image: url(../img/vpt.png);
+    }
+
+    #XPT {
+        background-image: url(../img/xpt.png);
+    }
+
+    #ZPT {
+        background-image: url(../img/zpt.png);
     }
 
     .capa-letra {
@@ -776,7 +991,7 @@
             width: 1px;
         }
         @media (max-width: $smart-maior) {
-            display: none;
+            display: none !important;
         }
     }
     table, #topodicionario {
@@ -1005,6 +1220,43 @@
     .ajuste-margin {
         margin-top: -10px;
     }
+}
+
+.voltartopo {
+    button {
+        background-color: $marrom;
+        color: white;
+        font-weight: 600;
+        padding: 6px 18px;
+        position: relative;
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+        display: none;
+        cursor: pointer;
+        @media (max-width: $smart-maior) {
+            bottom: 15px;
+            right: 15px;
+        }
+        img {
+            vertical-align: middle;
+            position: relative;
+            bottom: 0;
+            transition: $transicao;
+            width: 12px;
+            transform: rotate(270deg);
+        }
+        &:hover {
+            img {
+                bottom: 5px;
+                margin-left: 8px;
+                @media (max-width: $smart-maior) {
+                    position: absolute;
+                }
+            }
+        }
+    }
+
 }
 
 .navegacao {
