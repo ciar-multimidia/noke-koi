@@ -1446,21 +1446,22 @@ body {
     position: fixed;
     background-color: white; }
 
+.titulo h1 {
+  color: #1D0000; }
+  .titulo h1 .numeracao {
+    color: #CC3E00;
+    font-weight: 500; }
+  .titulo h1 img {
+    vertical-align: middle; }
+.titulo > img {
+  margin: 30px auto 60px; }
+  @media (max-width: 680px) {
+    .titulo > img {
+      height: 30px;
+      object-fit: cover; } }
+
 .corpo-texto {
   margin: 100px auto; }
-  .corpo-texto .titulo h1 {
-    color: #1D0000; }
-    .corpo-texto .titulo h1 .numeracao {
-      color: #CC3E00;
-      font-weight: 500; }
-    .corpo-texto .titulo h1 img {
-      vertical-align: middle; }
-  .corpo-texto .titulo > img {
-    margin: 30px auto 60px; }
-    @media (max-width: 680px) {
-      .corpo-texto .titulo > img {
-        height: 30px;
-        object-fit: cover; } }
   .corpo-texto ul li b:first-child {
     color: #CC3E00;
     font-weight: 800; }
@@ -1580,6 +1581,12 @@ body {
             font-size: 16px; } }
     .corpo-texto .numero-pessoa p {
       font-style: italic; }
+  .corpo-texto .mapas {
+    margin: auto;
+    display: block;
+    max-width: 480px; }
+  .corpo-texto a {
+    box-shadow: inset 0 -2px 0 #CC3E00; }
 
 .dicionariotopo {
   margin-bottom: 120px; }
@@ -1640,90 +1647,6 @@ body {
     display: none; }
     .dicionariotopo .secaoletra .filtros-letra {
       margin-top: 40px; }
-  .dicionariotopo #A .capa-letra {
-    background-image: url(../img/a.png); }
-  .dicionariotopo #E .capa-letra {
-    background-image: url(../img/e.png); }
-  .dicionariotopo #H .capa-letra {
-    background-image: url(../img/h.png); }
-  .dicionariotopo #I .capa-letra {
-    background-image: url(../img/i.png); }
-  .dicionariotopo #K .capa-letra {
-    background-image: url(../img/k.png); }
-  .dicionariotopo #M .capa-letra {
-    background-image: url(../img/j.png); }
-  .dicionariotopo #N .capa-letra {
-    background-image: url(../img/n.png); }
-  .dicionariotopo #O .capa-letra {
-    background-image: url(../img/o.png); }
-  .dicionariotopo #P .capa-letra {
-    background-image: url(../img/p.png); }
-  .dicionariotopo #R .capa-letra {
-    background-image: url(../img/r.png); }
-  .dicionariotopo #S .capa-letra {
-    background-image: url(../img/s.png); }
-  .dicionariotopo #SH .capa-letra {
-    background-image: url(../img/sh.png); }
-  .dicionariotopo #T .capa-letra {
-    background-image: url(../img/t.png); }
-  .dicionariotopo #TS .capa-letra {
-    background-image: url(../img/ts.png); }
-  .dicionariotopo #TX .capa-letra {
-    background-image: url(../img/tx.png); }
-  .dicionariotopo #V .capa-letra {
-    background-image: url(../img/v.png); }
-  .dicionariotopo #W .capa-letra {
-    background-image: url(../img/w.png); }
-  .dicionariotopo #X .capa-letra {
-    background-image: url(../img/x.png); }
-  .dicionariotopo #Y .capa-letra {
-    background-image: url(../img/y.png); }
-  .dicionariotopo #APT {
-    background-image: url(../img/apt.png); }
-  .dicionariotopo #BPT {
-    background-image: url(../img/bpt.png); }
-  .dicionariotopo #CPT {
-    background-image: url(../img/cpt.png); }
-  .dicionariotopo #DPT {
-    background-image: url(../img/dpt.png); }
-  .dicionariotopo #EPT {
-    background-image: url(../img/ept.png); }
-  .dicionariotopo #FPT {
-    background-image: url(../img/fpt.png); }
-  .dicionariotopo #GPT {
-    background-image: url(../img/gpt.png); }
-  .dicionariotopo #HPT {
-    background-image: url(../img/hpt.png); }
-  .dicionariotopo #IPT {
-    background-image: url(../img/ipt.png); }
-  .dicionariotopo #JPT {
-    background-image: url(../img/jpt.png); }
-  .dicionariotopo #LPT {
-    background-image: url(../img/lpt.png); }
-  .dicionariotopo #MPT {
-    background-image: url(../img/mpt.png); }
-  .dicionariotopo #NPT {
-    background-image: url(../img/npt.png); }
-  .dicionariotopo #OPT {
-    background-image: url(../img/opt.png); }
-  .dicionariotopo #PPT {
-    background-image: url(../img/ppt.png); }
-  .dicionariotopo #QPT {
-    background-image: url(../img/qpt.png); }
-  .dicionariotopo #RPT {
-    background-image: url(../img/rpt.png); }
-  .dicionariotopo #SPT {
-    background-image: url(../img/spt.png); }
-  .dicionariotopo #TPT {
-    background-image: url(../img/tpt.png); }
-  .dicionariotopo #UPT {
-    background-image: url(../img/upt.png); }
-  .dicionariotopo #VPT {
-    background-image: url(../img/vpt.png); }
-  .dicionariotopo #XPT {
-    background-image: url(../img/xpt.png); }
-  .dicionariotopo #ZPT {
-    background-image: url(../img/zpt.png); }
   @media (min-width: 680px) {
     .dicionariotopo .capa-letra {
       height: 180px;
@@ -1935,6 +1858,132 @@ body {
     width: 1px; }
   .dicionariotopo .ajuste-margin {
     margin-top: -10px; }
+
+.noke #A .capa-letra {
+  background-image: url(../img/a.png); }
+.noke #E .capa-letra {
+  background-image: url(../img/e.png); }
+.noke #H .capa-letra {
+  background-image: url(../img/h.png); }
+.noke #I .capa-letra {
+  background-image: url(../img/i.png); }
+.noke #K .capa-letra {
+  background-image: url(../img/k.png); }
+.noke #M .capa-letra {
+  background-image: url(../img/m.png); }
+.noke #N .capa-letra {
+  background-image: url(../img/n.png); }
+.noke #O .capa-letra {
+  background-image: url(../img/o.png); }
+.noke #P .capa-letra {
+  background-image: url(../img/p.png); }
+.noke #R .capa-letra {
+  background-image: url(../img/r.png); }
+.noke #S .capa-letra {
+  background-image: url(../img/s.png); }
+.noke #SH .capa-letra {
+  background-image: url(../img/sh.png); }
+.noke #T .capa-letra {
+  background-image: url(../img/t.png); }
+.noke #TS .capa-letra {
+  background-image: url(../img/ts.png); }
+.noke #TX .capa-letra {
+  background-image: url(../img/tx.png); }
+.noke #V .capa-letra {
+  background-image: url(../img/v.png); }
+.noke #W .capa-letra {
+  background-image: url(../img/w.png); }
+.noke #X .capa-letra {
+  background-image: url(../img/x.png); }
+.noke #Y .capa-letra {
+  background-image: url(../img/y.png); }
+
+.portugues #A .capa-letra {
+  background-image: url(../img/apt.png); }
+.portugues #B .capa-letra {
+  background-image: url(../img/bpt.png); }
+.portugues #C .capa-letra {
+  background-image: url(../img/cpt.png); }
+.portugues #D .capa-letra {
+  background-image: url(../img/dpt.png); }
+.portugues #E .capa-letra {
+  background-image: url(../img/ept.png); }
+.portugues #F .capa-letra {
+  background-image: url(../img/fpt.png); }
+.portugues #G .capa-letra {
+  background-image: url(../img/gpt.png); }
+.portugues #H .capa-letra {
+  background-image: url(../img/hpt.png); }
+.portugues #I .capa-letra {
+  background-image: url(../img/ipt.png); }
+.portugues #J .capa-letra {
+  background-image: url(../img/jpt.png); }
+.portugues #L .capa-letra {
+  background-image: url(../img/lpt.png); }
+.portugues #M .capa-letra {
+  background-image: url(../img/mpt.png); }
+.portugues #N .capa-letra {
+  background-image: url(../img/npt.png); }
+.portugues #O .capa-letra {
+  background-image: url(../img/opt.png); }
+.portugues #P .capa-letra {
+  background-image: url(../img/ppt.png); }
+.portugues #Q .capa-letra {
+  background-image: url(../img/qpt.png); }
+.portugues #R .capa-letra {
+  background-image: url(../img/rpt.png); }
+.portugues #S .capa-letra {
+  background-image: url(../img/spt.png); }
+.portugues #T .capa-letra {
+  background-image: url(../img/tpt.png); }
+.portugues #U .capa-letra {
+  background-image: url(../img/upt.png); }
+.portugues #V .capa-letra {
+  background-image: url(../img/vpt.png); }
+.portugues #X .capa-letra {
+  background-image: url(../img/xpt.png); }
+.portugues #Z .capa-letra {
+  background-image: url(../img/zpt.png); }
+
+.fichatecnica h3 {
+  color: #CC3E00;
+  margin-bottom: 30px; }
+@media (min-width: 680px) {
+  .fichatecnica .col {
+    width: 48%;
+    display: inline-block;
+    vertical-align: top; }
+    .fichatecnica .col:first-child {
+      padding-right: 25px; }
+    .fichatecnica .col:last-child {
+      padding-left: 25px; } }
+
+.catalografica {
+  width: 100%;
+  max-width: 800px;
+  font-size: 0.8em;
+  margin: 60px auto 0; }
+  .catalografica .topo {
+    position: relative;
+    width: 100%;
+    font-size: 1em;
+    padding: 10px 25px;
+    background: black;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    max-width: 100%;
+    margin: unset; }
+  .catalografica .caixa {
+    display: flex;
+    padding: 20px;
+    border: 1px solid #ededed;
+    margin-bottom: 1em; }
+    .catalografica .caixa p {
+      margin-bottom: 1em; }
+  .catalografica .codigo {
+    flex-shrink: 0;
+    margin-right: 2em; }
 
 .voltartopo button {
   background-color: #1D0000;

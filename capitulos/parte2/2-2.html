@@ -6,10 +6,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../../assets/css/layout.css">
+	<link rel="icon" type="image/png" href="./assets/img/fav.png"/>
 	<base href="../../index.html">
 </head>
 <body>
-	<header id="menu-barra" class="container">
+		<header id="menu-barra" class="container">
 		<button id="abrir-menu" aria-controls="menu-aberto">Menu</button>
 	</header>
 	<section id="menu-aberto" aria-expanded="false">
@@ -19,8 +20,8 @@
 			<img class="padroes" src="./assets/img/menu-aberto-padrao.svg" alt="" aria-hidden="true">
 		</div>
 		<div class="itens-menu">
-			<a href="index.html">
-				<img src="./assets/img/menu-logo.svg" role="logo" alt="">
+			<a href="#">
+				<img src="./assets/img/menu-logo.svg" role="logo" alt="Logo Dicionário Noke Koi - Português">
 			</a>
 			<ul role="tree">
 				<li class="fechar-menu" role="treeitem">
@@ -30,7 +31,7 @@
 					<a class="menus" href="capitulos/apresentacao.html" tabindex="-1">Apresentação</a>
 				</li>
 				<li class="fechar-menu" role="treegrid">
-					<a class="menus expandir" tabindex="-1">Parte I <span class="sub-menus">∙ Grupo e Língua <img src="./assets/img/seta.svg"></span></a>
+					<a class="menus expandir" href="#3" tabindex="-1">Parte I <span class="sub-menus">∙ Grupo e Língua <img src="./assets/img/seta.svg" alt="" aria-hidden="true"></span></a>
 					<ul class="sub-menu" role="tree" aria-expanded="false">
 						<li role="treeitem">
 							<a href="capitulos/parte1/introducao.html">Txitxa vii txai / Introdução</a>
@@ -68,13 +69,10 @@
 					</ul>
 				</li>
 				<li class="fechar-menu" role="treegrid">
-					<a class="menus expandir" tabindex="-1">Parte II <span class="sub-menus" tabindex="-1">∙ Dicionário <img src="./assets/img/seta.svg"></span></a>
+					<a class="menus expandir" href="#" tabindex="-1">Parte II <span class="sub-menus" tabindex="-1">∙ Dicionário <img src="./assets/img/seta.svg" alt="" aria-hidden="true"></span></a>
 					<ul class="sub-menu" role="tree" aria-expanded="false">
 						<li role="treeitem">
 							<a href="capitulos/parte2/1.html">1. Notas explicativas</a>
-						</li>
-						<li role="treeitem">
-							<a href="capitulos/parte2/2.html">2. Entradas</a>
 						</li>
 						<li role="treeitem">
 							<a href="capitulos/parte2/2-1.html">2.1 Noke Koĩ - Português</a>
@@ -96,10 +94,10 @@
 			</ul>
 		</div>
 		<div class="botoes">
-			<a class="botao-voltar" href="index.html" tabindex="-1">
-				<span class="voltar"><img src="./assets/img/seta-voltar.svg"></span> Voltar ao início
+			<a class="botao-voltar" href="#" tabindex="-1">
+				<span class="voltar"><img src="./assets/img/seta-voltar.svg" aria-hidden="true"></span> Voltar ao início
 			</a>
-			<a class="botao-ficha" href="fichatecnica.html" tabindex="-1">
+			<a class="botao-ficha" href="#" tabindex="-1">
 				Ficha Técnica
 			</a>
 		</div>
@@ -110,10 +108,10 @@
 	<section class="container corpo-texto" style="margin-bottom: 40px;">
 		<div class="titulo">
 			<h1><span class="numeracao">2.2 ∙</span> Português <img src="./assets/img/seta-titulo.svg" aria-hidden="true"> Noke Koĩ</h1>
-			<img src="./assets/img/capitulos-padrao-titulo.svg">
+			<img src="./assets/img/capitulos-padrao-titulo.svg" alt="Padrão Indígena">
 		</div>
 	</section>
-	<section class="container dicionariotopo">
+	<section class="container dicionariotopo portugues">
 		<input type="search" name="Pesquisar" id="pesquisa" placeholder="Pesquise a palavra em português...">
 		<button id="limpar"><img src="./assets/img/menu-icone-fechar.svg" />Limpar busca</button>
 		<div class="filtros-letra esconder-pesquisa pt">
@@ -903,8 +901,8 @@
 			<div class="capa-letra esconder-pesquisa">
 				<span class="letra">B</span>
 			</div>
-			<table class="dicionario primeira-tabela">
-				<thead class="portugues">
+			<table class="dicionario proximas-tabelas">
+				<thead class="esconder-pesquisa portugues">
 					<tr>
 						<th>Português</th>
 						<th>Classificação</th>
@@ -1571,8 +1569,8 @@
 			<div class="capa-letra esconder-pesquisa">
 				<span class="letra">C</span>
 			</div>
-			<table class="dicionario primeira-tabela">
-				<thead class="portugues">
+			<table class="dicionario proximas-tabelas">
+				<thead class="esconder-pesquisa portugues">
 					<tr>
 						<th>Português</th>
 						<th>Classificação</th>
@@ -3167,8 +3165,8 @@
 			<div class="capa-letra esconder-pesquisa">
 				<span class="letra">D</span>
 			</div>
-			<table class="dicionario primeira-tabela">
-				<thead class="portugues">
+			<table class="dicionario proximas-tabelas">
+				<thead class="esconder-pesquisa portugues">
 					<tr>
 						<th>Português</th>
 						<th>Classificação</th>
@@ -3611,8 +3609,8 @@
 			<div class="capa-letra esconder-pesquisa">
 				<span class="letra">E</span>
 			</div>
-			<table class="dicionario primeira-tabela">
-				<thead class="portugues">
+			<table class="dicionario proximas-tabelas">
+				<thead class="esconder-pesquisa portugues">
 					<tr>
 						<th>Português</th>
 						<th>Classificação</th>
@@ -4295,8 +4293,8 @@
 			<div class="capa-letra esconder-pesquisa">
 				<span class="letra">F</span>
 			</div>
-			<table class="dicionario primeira-tabela">
-				<thead class="portugues">
+			<table class="dicionario proximas-tabelas">
+				<thead class="esconder-pesquisa portugues">
 					<tr>
 						<th>Português</th>
 						<th>Classificação</th>
@@ -4827,8 +4825,8 @@
 			<div class="capa-letra esconder-pesquisa">
 				<span class="letra">G</span>
 			</div>
-			<table class="dicionario primeira-tabela">
-				<thead class="portugues">
+			<table class="dicionario proximas-tabelas">
+				<thead class="esconder-pesquisa portugues">
 					<tr>
 						<th>Português</th>
 						<th>Classificação</th>
@@ -5159,8 +5157,8 @@
 			<div class="capa-letra esconder-pesquisa">
 				<span class="letra">H</span>
 			</div>
-			<table class="dicionario primeira-tabela">
-				<thead class="portugues">
+			<table class="dicionario proximas-tabelas">
+				<thead class="esconder-pesquisa portugues">
 					<tr>
 						<th>Português</th>
 						<th>Classificação</th>
@@ -5267,8 +5265,8 @@
 			<div class="capa-letra esconder-pesquisa">
 				<span class="letra">I</span>
 			</div>
-			<table class="dicionario primeira-tabela">
-				<thead class="portugues">
+			<table class="dicionario proximas-tabelas">
+				<thead class="esconder-pesquisa portugues">
 					<tr>
 						<th>Português</th>
 						<th>Classificação</th>
@@ -5519,8 +5517,8 @@
 			<div class="capa-letra esconder-pesquisa">
 				<span class="letra">J</span>
 			</div>
-			<table class="dicionario primeira-tabela">
-				<thead class="portugues">
+			<table class="dicionario proximas-tabelas">
+				<thead class="esconder-pesquisa portugues">
 					<tr>
 						<th>Português</th>
 						<th>Classificação</th>
@@ -5771,8 +5769,8 @@
 			<div class="capa-letra esconder-pesquisa">
 				<span class="letra">L</span>
 			</div>
-			<table class="dicionario primeira-tabela">
-				<thead class="portugues">
+			<table class="dicionario proximas-tabelas">
+				<thead class="esconder-pesquisa portugues">
 					<tr>
 						<th>Português</th>
 						<th>Classificação</th>
@@ -6095,8 +6093,8 @@
 			<div class="capa-letra esconder-pesquisa">
 				<span class="letra">M</span>
 			</div>
-			<table class="dicionario primeira-tabela">
-				<thead class="portugues">
+			<table class="dicionario proximas-tabelas">
+				<thead class="esconder-pesquisa portugues">
 					<tr>
 						<th>Português</th>
 						<th>Classificação</th>
@@ -6947,8 +6945,8 @@
 			<div class="capa-letra esconder-pesquisa">
 				<span class="letra">N</span>
 			</div>
-			<table class="dicionario primeira-tabela">
-				<thead class="portugues">
+			<table class="dicionario proximas-tabelas">
+				<thead class="esconder-pesquisa portugues">
 					<tr>
 						<th>Português</th>
 						<th>Classificação</th>
@@ -7399,8 +7397,8 @@
 			<div class="capa-letra esconder-pesquisa">
 				<span class="letra">O</span>
 			</div>
-			<table class="dicionario primeira-tabela">
-				<thead class="portugues">
+			<table class="dicionario proximas-tabelas">
+				<thead class="esconder-pesquisa portugues">
 					<tr>
 						<th>Português</th>
 						<th>Classificação</th>
@@ -7587,8 +7585,8 @@
 			<div class="capa-letra esconder-pesquisa">
 				<span class="letra">P</span>
 			</div>
-			<table class="dicionario primeira-tabela">
-				<thead class="portugues">
+			<table class="dicionario proximas-tabelas">
+				<thead class="esconder-pesquisa portugues">
 					<tr>
 						<th>Português</th>
 						<th>Classificação</th>
@@ -8695,8 +8693,8 @@
 			<div class="capa-letra esconder-pesquisa">
 				<span class="letra">Q</span>
 			</div>
-			<table class="dicionario primeira-tabela">
-				<thead class="portugues">
+			<table class="dicionario proximas-tabelas">
+				<thead class="esconder-pesquisa portugues">
 					<tr>
 						<th>Português</th>
 						<th>Classificação</th>
@@ -8883,8 +8881,8 @@
 			<div class="capa-letra esconder-pesquisa">
 				<span class="letra">R</span>
 			</div>
-			<table class="dicionario primeira-tabela">
-				<thead class="portugues">
+			<table class="dicionario proximas-tabelas">
+				<thead class="esconder-pesquisa portugues">
 					<tr>
 						<th>Português</th>
 						<th>Classificação</th>
@@ -9287,8 +9285,8 @@
 			<div class="capa-letra esconder-pesquisa">
 				<span class="letra">S</span>
 			</div>
-			<table class="dicionario primeira-tabela">
-				<thead class="portugues">
+			<table class="dicionario proximas-tabelas">
+				<thead class="esconder-pesquisa portugues">
 					<tr>
 						<th>Português</th>
 						<th>Classificação</th>
@@ -9899,8 +9897,8 @@
 			<div class="capa-letra esconder-pesquisa">
 				<span class="letra">T</span>
 			</div>
-			<table class="dicionario primeira-tabela">
-				<thead class="portugues">
+			<table class="dicionario proximas-tabelas">
+				<thead class="esconder-pesquisa portugues">
 					<tr>
 						<th>Português</th>
 						<th>Classificação</th>
@@ -10559,8 +10557,8 @@
 			<div class="capa-letra esconder-pesquisa">
 				<span class="letra">U</span>
 			</div>
-			<table class="dicionario primeira-tabela">
-				<thead class="portugues">
+			<table class="dicionario proximas-tabelas">
+				<thead class="esconder-pesquisa portugues">
 					<tr>
 						<th>Português</th>
 						<th>Classificação</th>
@@ -10667,8 +10665,8 @@
 			<div class="capa-letra esconder-pesquisa">
 				<span class="letra">V</span>
 			</div>
-			<table class="dicionario primeira-tabela">
-				<thead class="portugues">
+			<table class="dicionario proximas-tabelas">
+				<thead class="esconder-pesquisa portugues">
 					<tr>
 						<th>Português</th>
 						<th>Classificação</th>
@@ -11047,8 +11045,8 @@
 			<div class="capa-letra esconder-pesquisa">
 				<span class="letra">X</span>
 			</div>
-			<table class="dicionario primeira-tabela">
-				<thead class="portugues">
+			<table class="dicionario proximas-tabelas">
+				<thead class="esconder-pesquisa portugues">
 					<tr>
 						<th>Português</th>
 						<th>Classificação</th>
@@ -11099,8 +11097,8 @@
 			<div class="capa-letra esconder-pesquisa">
 				<span class="letra">Z</span>
 			</div>
-			<table class="dicionario primeira-tabela">
-				<thead class="portugues">
+			<table class="dicionario proximas-tabelas">
+				<thead class="esconder-pesquisa portugues">
 					<tr>
 						<th>Português</th>
 						<th>Classificação</th>
@@ -11165,15 +11163,15 @@
 	</section>
 	<section class="container voltartopo">
 		<button>
-			Voltar ao topo <img src="./assets/img/seta.svg"> 
+			Voltar ao topo <img src="./assets/img/seta.svg" aria-hidden="true"> 
 		</button>
 	</section>
 	<section class="container navegacao">
 		<a class="anterior" href="capitulos/parte2/2-1.html">
-			<img src="./assets/img/seta.svg"> Dicionário Noke Koĩ - Português 
+			<img src="./assets/img/seta.svg" aria-hidden="true"> Dicionário Noke Koĩ - Português 
 		</a>
 		<a class="proximo" href="capitulos/parte2/3.html">
-			Mapas <img src="./assets/img/seta.svg">
+			Mapas <img src="./assets/img/seta.svg" aria-hidden="true">
 		</a>
 	</section>
 	<footer id="footer">

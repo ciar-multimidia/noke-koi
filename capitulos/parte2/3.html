@@ -2,14 +2,15 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Dicionário Noke Koĩ - Português</title>
+	<title>Parte 2 - Mapas | Dicionário Noke Koĩ - Português</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../../assets/css/layout.css">
+	<link rel="icon" type="image/png" href="./assets/img/fav.png"/>
 	<base href="../../index.html">
 </head>
 <body>
-	<header id="menu-barra" class="container">
+		<header id="menu-barra" class="container">
 		<button id="abrir-menu" aria-controls="menu-aberto">Menu</button>
 	</header>
 	<section id="menu-aberto" aria-expanded="false">
@@ -20,7 +21,7 @@
 		</div>
 		<div class="itens-menu">
 			<a href="#">
-				<img src="./assets/img/menu-logo.svg" role="logo" alt="">
+				<img src="./assets/img/menu-logo.svg" role="logo" alt="Logo Dicionário Noke Koi - Português">
 			</a>
 			<ul role="tree">
 				<li class="fechar-menu" role="treeitem">
@@ -30,7 +31,7 @@
 					<a class="menus" href="capitulos/apresentacao.html" tabindex="-1">Apresentação</a>
 				</li>
 				<li class="fechar-menu" role="treegrid">
-					<a class="menus expandir" tabindex="-1">Parte I <span class="sub-menus">∙ Grupo e Língua <img src="./assets/img/seta.svg"></span></a>
+					<a class="menus expandir" href="#3" tabindex="-1">Parte I <span class="sub-menus">∙ Grupo e Língua <img src="./assets/img/seta.svg" alt="" aria-hidden="true"></span></a>
 					<ul class="sub-menu" role="tree" aria-expanded="false">
 						<li role="treeitem">
 							<a href="capitulos/parte1/introducao.html">Txitxa vii txai / Introdução</a>
@@ -68,13 +69,10 @@
 					</ul>
 				</li>
 				<li class="fechar-menu" role="treegrid">
-					<a class="menus expandir" tabindex="-1">Parte II <span class="sub-menus" tabindex="-1">∙ Dicionário <img src="./assets/img/seta.svg"></span></a>
+					<a class="menus expandir" href="#" tabindex="-1">Parte II <span class="sub-menus" tabindex="-1">∙ Dicionário <img src="./assets/img/seta.svg" alt="" aria-hidden="true"></span></a>
 					<ul class="sub-menu" role="tree" aria-expanded="false">
 						<li role="treeitem">
 							<a href="capitulos/parte2/1.html">1. Notas explicativas</a>
-						</li>
-						<li role="treeitem">
-							<a href="capitulos/parte2/2.html">2. Entradas</a>
 						</li>
 						<li role="treeitem">
 							<a href="capitulos/parte2/2-1.html">2.1 Noke Koĩ - Português</a>
@@ -96,15 +94,51 @@
 			</ul>
 		</div>
 		<div class="botoes">
-			<a class="botao-voltar" href="index.html" tabindex="-1">
-				<span class="voltar"><img src="./assets/img/seta-voltar.svg"></span> Voltar ao início
+			<a class="botao-voltar" href="#" tabindex="-1">
+				<span class="voltar"><img src="./assets/img/seta-voltar.svg" aria-hidden="true"></span> Voltar ao início
 			</a>
-			<a class="botao-ficha" href="fichatecnica.html" tabindex="-1">
+			<a class="botao-ficha" href="#" tabindex="-1">
 				Ficha Técnica
 			</a>
 		</div>
 	</section>
-	<footer id="footer" aria-hidden="true">
+	<div class="barra-progresso" aria-hidden="true">
+		<div class="barra" id="padrao" style="background-image: url(./assets/img/barra-progresso.svg);"></div>
+	</div>
+	<section class="container corpo-texto">
+		<div class="titulo">
+			<h1><span class="numeracao">3 ∙</span> Mapas</h1>
+			<img src="./assets/img/capitulos-padrao-titulo.svg" alt="Padrão Indígena">
+		</div>
+
+		<div class="mapas">
+
+			<img src="./assets/img/mapa.png">
+			<p class="legenda" style="margin-bottom: 40px;">(i)  BRASIL E AS ÁREAS PÁNO <br />Fonte: Aguiar, 2018.</p>
+
+			<img src="./assets/img/mapa1.jpg">
+			<p class="legenda" style="margin-bottom: 40px;">(ii) TERRA INDÍGENA DO CAMPINAS <br />Fonte: Aguiar, 2020a</p>
+
+			<img src="./assets/img/mapa2.jpg">
+			<p class="legenda" style="margin-bottom: 40px;">(iii) TERRA INDÍGENA DO RIO GREGÓRIO <br />Fonte: Aguiar, 2020a</p>
+
+			<img src="./assets/img/imagem1.jpg">
+			<p class="legenda" style="margin-bottom: 40px;">BR 364 (maio de 1984) <br/>Fonte: Arquivo de Aguiar (BR-364), em 1984.</p>
+
+			<img src="./assets/img/imagem2.jpg">
+			<p class="legenda" style="margin-bottom: 40px;">Arquivo de Aguiar (1984) Aldeia do Campinas</p>
+		</div>
+
+	</section>
+	<section class="container navegacao">
+		<a class="anterior" href="capitulos/parte2/2-2.html">
+			<img src="./assets/img/seta.svg" aria-hidden="true"> Dicionário Português - Noke Koĩ
+		</a>
+		<a class="proximo" href="capitulos/parte2/4.html">
+			4. Kene shovi-ma xia noke-vo <img src="./assets/img/seta.svg" aria-hidden="true">
+		</a>
+	</section>
+	<footer id="footer">
 		<script src="./assets/js/jquery.js" type="text/javascript"></script>
 		<script src="./assets/js/scripts.js" type="text/javascript"></script>
 	</footer>
