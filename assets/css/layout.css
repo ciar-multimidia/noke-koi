@@ -1780,6 +1780,8 @@ body {
           background-color: #DEDEDE; } }
       .dicionariotopo table tbody tr td, .dicionariotopo #topodicionario tbody tr td {
         padding: 20px 10px; }
+        .dicionariotopo table tbody tr td:first-child, .dicionariotopo #topodicionario tbody tr td:first-child {
+          text-transform: lowercase; }
         @media (min-width: 680px) {
           .dicionariotopo table tbody tr td:first-child, .dicionariotopo #topodicionario tbody tr td:first-child {
             padding-left: 20px; }
@@ -1859,90 +1861,90 @@ body {
   .dicionariotopo .ajuste-margin {
     margin-top: -10px; }
 
-.noke #A .capa-letra {
+.noke #a .capa-letra {
   background-image: url(../img/a.png); }
-.noke #E .capa-letra {
+.noke #e .capa-letra {
   background-image: url(../img/e.png); }
-.noke #H .capa-letra {
+.noke #h .capa-letra {
   background-image: url(../img/h.png); }
-.noke #I .capa-letra {
+.noke #i .capa-letra {
   background-image: url(../img/i.png); }
-.noke #K .capa-letra {
+.noke #k .capa-letra {
   background-image: url(../img/k.png); }
-.noke #M .capa-letra {
+.noke #m .capa-letra {
   background-image: url(../img/m.png); }
-.noke #N .capa-letra {
+.noke #n .capa-letra {
   background-image: url(../img/n.png); }
-.noke #O .capa-letra {
+.noke #o .capa-letra {
   background-image: url(../img/o.png); }
-.noke #P .capa-letra {
+.noke #p .capa-letra {
   background-image: url(../img/p.png); }
-.noke #R .capa-letra {
+.noke #r .capa-letra {
   background-image: url(../img/r.png); }
-.noke #S .capa-letra {
+.noke #s .capa-letra {
   background-image: url(../img/s.png); }
-.noke #SH .capa-letra {
+.noke #sh .capa-letra {
   background-image: url(../img/sh.png); }
-.noke #T .capa-letra {
+.noke #t .capa-letra {
   background-image: url(../img/t.png); }
-.noke #TS .capa-letra {
+.noke #ts .capa-letra {
   background-image: url(../img/ts.png); }
-.noke #TX .capa-letra {
+.noke #tx .capa-letra {
   background-image: url(../img/tx.png); }
-.noke #V .capa-letra {
+.noke #v .capa-letra {
   background-image: url(../img/v.png); }
-.noke #W .capa-letra {
+.noke #w .capa-letra {
   background-image: url(../img/w.png); }
-.noke #X .capa-letra {
+.noke #x .capa-letra {
   background-image: url(../img/x.png); }
-.noke #Y .capa-letra {
+.noke #y .capa-letra {
   background-image: url(../img/y.png); }
 
-.portugues #A .capa-letra {
+.portugues #a .capa-letra {
   background-image: url(../img/apt.png); }
-.portugues #B .capa-letra {
+.portugues #b .capa-letra {
   background-image: url(../img/bpt.png); }
-.portugues #C .capa-letra {
+.portugues #c .capa-letra {
   background-image: url(../img/cpt.png); }
-.portugues #D .capa-letra {
+.portugues #d .capa-letra {
   background-image: url(../img/dpt.png); }
-.portugues #E .capa-letra {
+.portugues #e .capa-letra {
   background-image: url(../img/ept.png); }
-.portugues #F .capa-letra {
+.portugues #f .capa-letra {
   background-image: url(../img/fpt.png); }
-.portugues #G .capa-letra {
+.portugues #g .capa-letra {
   background-image: url(../img/gpt.png); }
-.portugues #H .capa-letra {
+.portugues #h .capa-letra {
   background-image: url(../img/hpt.png); }
-.portugues #I .capa-letra {
+.portugues #i .capa-letra {
   background-image: url(../img/ipt.png); }
-.portugues #J .capa-letra {
+.portugues #j .capa-letra {
   background-image: url(../img/jpt.png); }
-.portugues #L .capa-letra {
+.portugues #l .capa-letra {
   background-image: url(../img/lpt.png); }
-.portugues #M .capa-letra {
+.portugues #m .capa-letra {
   background-image: url(../img/mpt.png); }
-.portugues #N .capa-letra {
+.portugues #n .capa-letra {
   background-image: url(../img/npt.png); }
-.portugues #O .capa-letra {
+.portugues #o .capa-letra {
   background-image: url(../img/opt.png); }
-.portugues #P .capa-letra {
+.portugues #p .capa-letra {
   background-image: url(../img/ppt.png); }
-.portugues #Q .capa-letra {
+.portugues #q .capa-letra {
   background-image: url(../img/qpt.png); }
-.portugues #R .capa-letra {
+.portugues #r .capa-letra {
   background-image: url(../img/rpt.png); }
-.portugues #S .capa-letra {
+.portugues #s .capa-letra {
   background-image: url(../img/spt.png); }
-.portugues #T .capa-letra {
+.portugues #t .capa-letra {
   background-image: url(../img/tpt.png); }
-.portugues #U .capa-letra {
+.portugues #u .capa-letra {
   background-image: url(../img/upt.png); }
-.portugues #V .capa-letra {
+.portugues #v .capa-letra {
   background-image: url(../img/vpt.png); }
-.portugues #X .capa-letra {
+.portugues #x .capa-letra {
   background-image: url(../img/xpt.png); }
-.portugues #Z .capa-letra {
+.portugues #z .capa-letra {
   background-image: url(../img/zpt.png); }
 
 .fichatecnica h3 {

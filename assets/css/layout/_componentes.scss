@@ -920,6 +920,9 @@
                 }
                 td {
                     padding: 20px 10px;
+                    &:first-child {
+                        text-transform: lowercase;
+                    }
                     @media (min-width: $smart-maior) {
                         &:first-child {
                             padding-left: 20px;
@@ -1026,115 +1029,115 @@
 }
 
 .noke {
-    #A {
+    #a {
         .capa-letra {
             background-image: url(../img/a.png);
         }   
     }
 
-    #E {
+    #e {
         .capa-letra {
             background-image: url(../img/e.png);
         } 
     }
 
-    #H {
+    #h {
         .capa-letra {
             background-image: url(../img/h.png);
         } 
     }
 
-    #I {
+    #i {
         .capa-letra {
             background-image: url(../img/i.png);
         } 
     }
 
-    #K {
+    #k {
         .capa-letra {
             background-image: url(../img/k.png);
         } 
     }
 
-    #M {
+    #m {
         .capa-letra {
             background-image: url(../img/m.png);
         } 
     }
 
-    #N {
+    #n {
         .capa-letra {
             background-image: url(../img/n.png);
         } 
     }
 
-    #O {
+    #o {
         .capa-letra {
             background-image: url(../img/o.png);
         } 
     }
 
-    #P {
+    #p {
         .capa-letra {
             background-image: url(../img/p.png);
         } 
     }
 
-    #R {
+    #r {
         .capa-letra {
             background-image: url(../img/r.png);
         } 
     }
 
-    #S {
+    #s {
         .capa-letra {
             background-image: url(../img/s.png);
         } 
     }
 
-    #SH {
+    #sh {
         .capa-letra {
             background-image: url(../img/sh.png);
         } 
     }
 
-    #T {
+    #t {
         .capa-letra {
             background-image: url(../img/t.png);
         } 
     }
 
-    #TS {
+    #ts {
         .capa-letra {
             background-image: url(../img/ts.png);
         } 
     }
 
-    #TX {
+    #tx {
         .capa-letra {
             background-image: url(../img/tx.png);
         } 
     }
 
-    #V {
+    #v {
         .capa-letra {
             background-image: url(../img/v.png);
         } 
     }
 
-    #W {
+    #w {
         .capa-letra {
             background-image: url(../img/w.png);
         } 
     }
 
-    #X {
+    #x {
         .capa-letra {
             background-image: url(../img/x.png);
         } 
     }
 
-    #Y {
+    #y {
         .capa-letra {
             background-image: url(../img/y.png);
         } 
@@ -1142,139 +1145,139 @@
 }
 
 .portugues {
-    #A {
+    #a {
         .capa-letra {
             background-image: url(../img/apt.png);
         }
     }
 
-    #B {
+    #b {
         .capa-letra {
             background-image: url(../img/bpt.png);
         }
     }
 
-    #C {
+    #c {
         .capa-letra {
             background-image: url(../img/cpt.png);
         }
     }
 
-    #D {
+    #d {
         .capa-letra {
             background-image: url(../img/dpt.png);
         }
     }
 
-    #E {
+    #e {
         .capa-letra {
             background-image: url(../img/ept.png);
         }
     }
 
-    #F {
+    #f {
         .capa-letra {
             background-image: url(../img/fpt.png);
         }
     }
 
-    #G {
+    #g {
         .capa-letra {
             background-image: url(../img/gpt.png);
         }
     }
 
-    #H {
+    #h {
         .capa-letra {
             background-image: url(../img/hpt.png);
         }
     }
 
-    #I {
+    #i {
         .capa-letra {
             background-image: url(../img/ipt.png);
         }
     }
 
-    #J {
+    #j {
         .capa-letra {
             background-image: url(../img/jpt.png);
         }
     }
 
-    #L {
+    #l {
         .capa-letra {
             background-image: url(../img/lpt.png);
         }
     }
 
-    #M {
+    #m {
         .capa-letra {
             background-image: url(../img/mpt.png);
         }
     }
 
-    #N {
+    #n {
         .capa-letra {
             background-image: url(../img/npt.png);
         }
     }
 
-    #O {
+    #o {
         .capa-letra {
             background-image: url(../img/opt.png);
         }
     }
 
-    #P {
+    #p {
         .capa-letra {
             background-image: url(../img/ppt.png);
         }
     }
 
-    #Q {
+    #q {
         .capa-letra {
             background-image: url(../img/qpt.png);
         }
     }
 
-    #R {
+    #r {
         .capa-letra {
             background-image: url(../img/rpt.png);
         }
     }
 
-    #S {
+    #s {
         .capa-letra {
             background-image: url(../img/spt.png);
         }
     }
 
-    #T {
+    #t {
         .capa-letra {
             background-image: url(../img/tpt.png);
         }
     }
 
-    #U {
+    #u {
         .capa-letra {
             background-image: url(../img/upt.png);
         }
     }
 
-    #V {
+    #v {
         .capa-letra {
             background-image: url(../img/vpt.png);
         }
     }
 
-    #X {
+    #x {
         .capa-letra {
             background-image: url(../img/xpt.png);
         }
     }
 
-    #Z {
+    #z {
         .capa-letra {
             background-image: url(../img/zpt.png);
         }
