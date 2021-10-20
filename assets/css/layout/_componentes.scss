@@ -665,6 +665,34 @@
     }
 }
 
+.portugues {
+    table {
+        tbody {
+            tr {
+                td {
+                    &:nth-child(3) {
+                        text-transform: lowercase;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.noke {
+    table {
+        tbody {
+            tr {
+                td {
+                    &:nth-child(4) {
+                        text-transform: lowercase;
+                    }
+                }
+            }
+        }
+    }
+}
+
 .dicionariotopo {
     margin-bottom: 120px;
     @media (max-width: $smart-maior) {

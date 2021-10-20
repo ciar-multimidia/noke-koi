@@ -1588,6 +1588,12 @@ body {
   .corpo-texto a {
     box-shadow: inset 0 -2px 0 #CC3E00; }
 
+.portugues table tbody tr td:nth-child(3) {
+  text-transform: lowercase; }
+
+.noke table tbody tr td:nth-child(4) {
+  text-transform: lowercase; }
+
 .dicionariotopo {
   margin-bottom: 120px; }
   @media (max-width: 680px) {
