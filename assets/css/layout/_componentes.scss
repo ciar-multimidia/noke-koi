@@ -758,13 +758,6 @@
         }
     }
 
-    .secaoletra {
-        display: none;
-        .filtros-letra {
-            margin-top: 40px;
-        }
-    }
-
     .capa-letra {
         @media (min-width: $smart-maior) {
             height: 180px;
@@ -1499,4 +1492,58 @@
 
 .ui-helper-hidden-accessible {
     display: none;
+}
+
+
+@media print {
+    @page {
+      margin: 1.5cm 1cm;
+    }
+
+    header, #menu-aberto, .navegacao, .paginacao, footer {
+        display: none !important;
+    }
+
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        color: #000;
+    }
+
+    .corpo-texto {
+        margin: 20px auto !important;
+        p {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        table {
+            max-width: 90%;
+            font-size: 14px !important;
+            overflow: visible;
+            caption {
+                font-weight: 800;
+                text-transform: uppercase;
+            }
+            td {
+                padding: 6px;
+                font-size: 14px !important;
+            }
+        }
+        h3 {
+            margin-top: 20px;
+        }
+    }
+    .titulo {
+        img {
+            height: 20px;
+            margin: 30px auto;
+        }
+    }
+    table, img, svg, p {
+      break-inside: avoid;
+    }
+
+    .alinhar-esquerda td {
+        text-align: left !important;
+    }
 }
