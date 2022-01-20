@@ -1500,25 +1500,29 @@
       margin: 1.5cm 1cm;
     }
 
-    header, #menu-aberto, .navegacao, .paginacao, footer {
+    header, #menu-aberto, .navegacao, .paginacao, footer, #pesquisa, .filtros-letra {
         display: none !important;
     }
 
     body {
-        font-family: 'Arial', sans-serif;
+        font-family: Arial, Helvetica, sans-serif;
         margin: 0;
         color: #000;
+    }
+
+    h1 {
+        font-size: 1.3em !important;
     }
 
     .corpo-texto {
         margin: 20px auto !important;
         p {
-            font-size: 14px;
+            font-size: 12px;
             margin-bottom: 10px;
         }
         table {
             max-width: 90%;
-            font-size: 14px !important;
+            font-size: 12px !important;
             overflow: visible;
             caption {
                 font-weight: 800;
@@ -1526,24 +1530,98 @@
             }
             td {
                 padding: 6px;
-                font-size: 14px !important;
+                font-size: 12px !important;
+                &:before {
+                    font-size: 11px !important;
+                }
             }
         }
+
         h3 {
             margin-top: 20px;
         }
     }
+
+    .dicionario {
+            break-inside: auto !important;
+        td {
+            font-size: 12px !important;
+            padding: 3px 20px !important;
+            border-bottom: 1px solid #e9e9e9;
+            button {
+                display: none;
+            }
+        }
+
+        tr {
+            margin-bottom: 20px !important;
+            break-inside: avoid;
+            width: 48%;
+            &:nth-child(even) {
+                float: right;
+            }
+            &:nth-child(odd) {
+                float: left;
+                clear:both;
+            }
+        }
+    }
+
+    .letra {
+        margin-top: 80px !important;
+        padding: 2px 15px;
+        font-weight: 700;
+        color: $marrom !important;
+        border: 4px solid $marrom;
+        text-transform: uppercase;
+        font-size: 1.3em !important;
+    }
+
+    .nao-quebrar {
+        break-inside: avoid;
+        page-break-before: always;
+    }
+
     .titulo {
         img {
             height: 20px;
             margin: 30px auto;
         }
     }
-    table, img, svg, p {
+    table, img, svg, p, .capa-letra, .catalografica {
       break-inside: avoid;
+    }
+
+    .catalografica {
+        page-break-before: always;
+        max-width: 80%;
+        margin: auto;
+        .caixa {
+            border-color: black;
+        }
+        .topo {
+            border: 2px solid black;
+            color: black;
+        }
     }
 
     .alinhar-esquerda td {
         text-align: left !important;
+    }
+
+    .fichatecnica {
+      .col {
+        width: 46%;
+        &:nth-child(even) {
+            float: right;
+        }
+        &:nth-child(odd) {
+            float: left;
+            clear:both;
+        }
+      }
+      img {
+        display: none;
+      }
     }
 }
