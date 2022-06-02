@@ -20,13 +20,6 @@ body {
 	position: relative;
 
 	// fundo
-	&:before, &:after {
-		content: ""; position: fixed; display: block;
-		width: 50vw; height: 100vh; top: 0;
-	}
-
-	&:before { left: 0;}
-	&:after { right: 0; @include transform(scale(-1));}
 
 	& > * {position: relative; z-index: 1;}
 	
@@ -37,3 +30,5 @@ body {
 }
 
 @import "layout/componentes";
+@import "layout/print";
+@import "layout/impressao-qualidade";

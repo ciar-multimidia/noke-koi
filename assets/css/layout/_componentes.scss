@@ -822,11 +822,11 @@
         width: 100%;
         border-collapse: separate;
         border-spacing: 0px 10px;
-        @media (max-width: $smart-maior) {
+        @media screen and (max-width: $smart-maior) {
             border-spacing: 0px 20px;
         }
         thead {
-            @media (max-width: $smart-maior) {
+            @media screen and (max-width: $smart-maior) {
                 border: none;
                 clip: rect(0 0 0 0);
                 height: 1px;
@@ -848,7 +848,7 @@
         .nokekoi {
             tr {
                 th {
-                    @media (min-width: $smart-maior) {
+                    @media screen and (min-width: $smart-maior) {
                         &:nth-child(1) {
                             width: 180px;
                         }
@@ -875,7 +875,7 @@
         .portugues {
             tr {
                 th {
-                    @media (min-width: $smart-maior) {
+                    @media screen and (min-width: $smart-maior) {
                         &:nth-child(1) {
                             width: 120px;
                         }
@@ -900,14 +900,14 @@
         }
 
         tr {
-            @media (max-width: $smart-maior) {
+            @media screen and (max-width: $smart-maior) {
                 display: block;
                 margin-bottom: .625em;
             }
         }
 
         td {
-            @media (max-width: $smart-maior) {
+            @media screen and (max-width: $smart-maior) {
                 border-bottom: 1px solid $cinzaborda;
                 display: block;
                 text-align: right;
@@ -934,7 +934,7 @@
             tr {
                 background-color: $cinzatabela;
                 transition: $transicao;
-                @media (min-width: $smart-maior) {
+                @media screen and (min-width: $smart-maior) {
                     &:hover {
                         background-color: $cinzatabelahover;
                     }
@@ -944,7 +944,7 @@
                     &:first-child {
                         text-transform: lowercase;
                     }
-                    @media (min-width: $smart-maior) {
+                    @media screen and (min-width: $smart-maior) {
                         &:first-child {
                             padding-left: 20px;
                         }
@@ -952,7 +952,7 @@
                             padding-right: 20px;
                         }  
                     }
-                    @media (min-width: $smart-maior) {
+                    @media screen and (min-width: $smart-maior) {
                         &:nth-child(1) {
                             width: 180px;
                         }
@@ -1495,133 +1495,3 @@
 }
 
 
-@media print {
-    @page {
-      margin: 1.5cm 1cm;
-    }
-
-    header, #menu-aberto, .navegacao, .paginacao, footer, #pesquisa, .filtros-letra {
-        display: none !important;
-    }
-
-    body {
-        font-family: sans-serif !important;
-        margin: 0;
-        color: #000;
-    }
-
-    h1 {
-        font-size: 1.3em !important;
-    }
-
-    .corpo-texto {
-        margin: 20px auto !important;
-        p {
-            font-size: 12px;
-            margin-bottom: 10px;
-        }
-        table {
-            max-width: 90%;
-            font-size: 12px !important;
-            overflow: visible;
-            caption {
-                font-weight: 800;
-                text-transform: uppercase;
-            }
-            td {
-                padding: 6px;
-                font-size: 12px !important;
-                &:before {
-                    font-size: 11px !important;
-                }
-            }
-        }
-
-        h3 {
-            margin-top: 20px;
-        }
-    }
-
-    .dicionario {
-            break-inside: auto !important;
-        td {
-            font-size: 12px !important;
-            padding: 3px 20px !important;
-            border-bottom: 1px solid #e9e9e9;
-            button {
-                display: none;
-            }
-        }
-
-        tr {
-            margin-bottom: 20px !important;
-            break-inside: avoid;
-            width: 48%;
-            &:nth-child(even) {
-                float: right;
-            }
-            &:nth-child(odd) {
-                float: left;
-                clear:both;
-            }
-        }
-    }
-
-    .letra {
-        margin-top: 80px !important;
-        padding: 2px 15px;
-        font-weight: 700;
-        color: $marrom !important;
-        border: 4px solid $marrom;
-        text-transform: uppercase;
-        font-size: 1.3em !important;
-    }
-
-    .nao-quebrar {
-        break-inside: avoid;
-        page-break-before: always;
-    }
-
-    .titulo {
-        img {
-            height: 20px;
-            margin: 30px auto;
-        }
-    }
-    table, img, svg, p, .capa-letra, .catalografica {
-      break-inside: avoid;
-    }
-
-    .catalografica {
-        page-break-before: always;
-        max-width: 80%;
-        margin: auto;
-        .caixa {
-            border-color: black;
-        }
-        .topo {
-            border: 2px solid black;
-            color: black;
-        }
-    }
-
-    .alinhar-esquerda td {
-        text-align: left !important;
-    }
-
-    .fichatecnica {
-      .col {
-        width: 46%;
-        &:nth-child(even) {
-            float: right;
-        }
-        &:nth-child(odd) {
-            float: left;
-            clear:both;
-        }
-      }
-      img {
-        display: none;
-      }
-    }
-}

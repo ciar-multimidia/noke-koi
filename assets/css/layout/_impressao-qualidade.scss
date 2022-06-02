@@ -1,0 +1,11 @@
+@media print{
+	body.impressao-qualidade{
+		#menu-barra,
+		#menu-aberto,
+		.barra-progresso,
+		.corpo-texto,
+		.filtros-letra{
+			display: none !important;
+		}
+	}
+}
