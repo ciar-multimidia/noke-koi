@@ -1,6 +1,10 @@
 @media print {
+    // @page {
+    //   margin: 1.5cm 1cm;
+    // }
+
     @page {
-      margin: 1.5cm 1cm;
+      margin: 1.5cm 1.5cm 3cm 2.5cm;
     }
 
     body {
@@ -18,35 +22,49 @@
     }
 
 
-    .corpo-texto {
-        margin: 20px auto !important;
-        p {
-            font-size: 12px;
-            margin-bottom: 10px;
-        }
-        table {
-            max-width: 90%;
-            font-size: 12px !important;
-            overflow: visible;
-            caption {
-                font-weight: 800;
-                text-transform: uppercase;
-            }
-            td {
-                padding: 6px;
-                font-size: 12px !important;
-                &:before {
-                    font-size: 11px !important;
-                }
-            }
-        }
+    .nao-quebrar {
+        break-inside: avoid;
+        page-break-before: always;
+    }    
 
-        h3 {
-            margin-top: 20px;
-        }
+    .alinhar-esquerda td {
+        text-align: left !important;
     }
 
+
+    
+
     body:not(.impressao-qualidade){
+
+        .corpo-texto {
+            margin: 20px auto !important;
+            p {
+                font-size: 12px;
+                margin-bottom: 10px;
+            }
+            table {
+                max-width: 90%;
+                font-size: 12px !important;
+                overflow: visible;
+                caption {
+                    font-weight: 800;
+                    text-transform: uppercase;
+                }
+                td {
+                    padding: 6px;
+                    font-size: 12px !important;
+                    &:before {
+                        font-size: 11px !important;
+                    }
+                }
+            }
+
+            h3 {
+                margin-top: 20px;
+            }
+        }
+
+
         .dicionario {
                 break-inside: auto !important;
             td {
@@ -71,74 +89,77 @@
                 }
             }
         }
+
+
+
+        .catalografica {
+            page-break-before: always;
+            max-width: 80%;
+            margin: auto;
+            .caixa {
+                border-color: black;
+            }
+            .topo {
+                border: 2px solid black;
+                color: black;
+            }
+        }
+        .fichatecnica {
+          .col {
+            width: 46%;
+            &:nth-child(even) {
+                float: right;
+            }
+            &:nth-child(odd) {
+                float: left;
+                clear:both;
+            }
+          }
+          img {
+            display: none;
+          }
+        }
+
+        .letra {
+                margin-top: 80px !important;
+                padding: 2px 15px;
+                font-weight: 700;
+                color: $marrom !important;
+                border: 4px solid $marrom;
+                text-transform: uppercase;
+                font-size: 1.3em !important;
+            }
+        .titulo {
+                img {
+                    height: 20px;
+                    margin: 30px auto;
+                }
+            }
+            table, img, svg, p, .capa-letra, .catalografica {
+              break-inside: avoid;
+            }
     }
 
     
 
-    .letra {
-        margin-top: 80px !important;
-        padding: 2px 15px;
-        font-weight: 700;
-        color: $marrom !important;
-        border: 4px solid $marrom;
-        text-transform: uppercase;
-        font-size: 1.3em !important;
-    }
+    
 
-    .nao-quebrar {
-        break-inside: avoid;
-        page-break-before: always;
-    }
+ 
 
-    .titulo {
-        img {
-            height: 20px;
-            margin: 30px auto;
-        }
-    }
-    table, img, svg, p, .capa-letra, .catalografica {
-      break-inside: avoid;
-    }
-
-    .catalografica {
-        page-break-before: always;
-        max-width: 80%;
-        margin: auto;
-        .caixa {
-            border-color: black;
-        }
-        .topo {
-            border: 2px solid black;
-            color: black;
-        }
-    }
-
-    .alinhar-esquerda td {
-        text-align: left !important;
-    }
-
-    .fichatecnica {
-      .col {
-        width: 46%;
-        &:nth-child(even) {
-            float: right;
-        }
-        &:nth-child(odd) {
-            float: left;
-            clear:both;
-        }
-      }
-      img {
-        display: none;
-      }
-    }
+    
 
 
 
 
-    /* IMPRESSAO DE QUALIDADE */
+    /* @@@@@@ IMPRESSAO DE QUALIDADE @@@@@@ */
 
     body.impressao-qualidade{
+
+        
+
+        font-size: 11pt;
+        line-height: 1.6;
+
         &:before, &:after{
             content: none;
         }
@@ -147,7 +168,6 @@
         #menu-barra,
         #menu-aberto,
         .barra-progresso,
-        .corpo-texto,
         .filtros-letra,
         .fixartopo,
         .voltartopo{
@@ -159,15 +179,183 @@
             padding: 0;
         }
 
+        // capa
+        .bloco-intro{
+            .bloco-inicial{
+                & > p{
+                    width: 50%;
+                }
+                .botoes{
+                    display: none;
+                }
+            }
+
+            .botao-ficha{
+                display: none;
+            }
+        }
+
+        #animacao-inicio{
+            display: none;
+        }
+
+
+
+        // titulo
+        .titulo{
+            margin-bottom: 1cm;
+            h1{
+                font-size: 2em !important;
+            }
+            & > img{
+                display: block;
+                height: .5cm;
+                margin: .25cm 0 0;
+            }
+
+            &.capitular{
+                page-break-after: always;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+
+                h1{
+                    font-size: 3em !important;
+                }
+
+                & > img{
+                    height: 2em;
+                }
+            }
+        }
+
+
+
+        // ficha tecnica
+        .catalografica{
+            display: none;
+        }
+
+        .fichatecnica{
+            columns: 3;
+            column-gap: 1cm;
+            font-size: 9pt;
+            .col{
+                h3{
+                    margin-top: 0;
+                }
+                img{
+                    width: auto !important;
+                    height: 2.5cm;
+                }
+            }
+        }
+
+        .copyright{
+            // font-size: 9pt;
+            margin-top: 2cm;
+        }
+
+
+
+
+        // corpo de texto
+        .corpo-texto{
+            margin: 0;
+            h2{
+                font-size: 1.4em;
+            }
+
+            table{
+                font-size: 9pt;
+                line-height: 1.4;
+                width: 60%;
+                break-inside: avoid;
+                margin-left: 0;
+                margin-right: 0;
+                th, td{
+                    padding: 4px 2px  !important;
+                }
+            }
+
+            .numero-pessoa{
+                table{
+                    td{
+                        font-size: inherit;
+                    }
+                }
+            }
+
+            .legenda{
+                // text-align: center;
+            }
+        }
+
+        .colunas-print{
+            columns: 2;
+            column-gap: 1cm;
+            orphans: 4;
+            widows: 4;
+
+            
+        }
+
+        .coluna-print-unica{
+            width: calc(50% - .5cm);
+            orphans: 4;
+            widows: 4;
+        }
+
+        .mapas{
+            columns: 2;
+            column-gap: 1cm;
+            max-width: none;
+            .um-mapa{
+                break-inside: avoid;
+            }
+            img{
+                display: block;
+                height: 12cm;
+            }
+        }
+
+
+
+        .capa-letra{
+            page-break-before: always;
+            page-break-after: always;
+            height: 100vh;
+            margin: 0;
+            background-color: transparent;
+            background-position: right center;
+            background-size: calc(100% - 3cm) auto;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            .letra{
+                position: static;
+                font-size: 30pt;
+                padding: .5cm;
+                transform: none;
+            }
+        }
+
         .dicionario{
             font-size: 9pt;
-            line-height: 11pt;
+            line-height: 1.2;
             &, & *{
                 border-collapse: collapse;
                 border-spacing: 0;
+                
             }
 
-            th, td{
+            th{
+                padding: 0 15px 5px;
+            }
+
+            td{
                 padding: 10px 15px;
                 // &:first-child{
                 //     padding-left: 0;
@@ -188,9 +376,10 @@
             thead{
                 tr{
                     th{
-                        color: black;
+                        // color: black;
                         font-weight: bold;
-                        border-bottom: 2px solid grey;
+                        border-bottom: 2px solid;
+                        vertical-align: bottom;
                     }
                 }
             }
